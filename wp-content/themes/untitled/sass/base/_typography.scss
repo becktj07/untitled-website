@@ -21,3 +21,23 @@
     color: blue;
 }
 }
+
+@font-face {
+    font-family: 'SS-Black';
+    src: url('~/wp-content/themes/untitled/fonts/SourceSansPro-Black.ttf');
+  }
+  
+  @font-face {
+    font-family: 'SS-Bold';
+    src: url('~/wp-content/themes/untitled/fonts/SourceSansPro-Bold.ttf');
+  }
+  
+  @font-face {
+    font-family: 'SS-Regular';
+    src: url('~/wp-content/themes/untitled/fonts/SourceSansPro-Regular.ttf');
+  }
+
+  @font-face {
+    font-family: 'SS-Light';
+    src: url('~/wp-content/themes/untitled/fonts/SourceSansPro-Light.ttf');
+  }
