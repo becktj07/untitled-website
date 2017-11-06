@@ -1,0 +1,45 @@
+
+.home-slider__outer-wrapper {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+
+    @media #{$mq-large} {
+        margin-top: 150px; 
+        margin-bottom: 100px;
+    }
+}
+
+.home-slider__inner-wrapper {
+    @include box-sizing;
+    @extend .clearfix;
+    position: relative;
+    width: 100%;
+    padding: 0 40px;
+    max-width: 820px;
+    margin: 0 auto;
+
+    @media #{$mq-large} {
+        padding: 0;
+    }
+}
+
+.home-text-overlay {
+    color: #000;
+    text-transform: uppercase;
+    font-family: $heading-font;
+    @include centerer;
+    z-index: 999;
+    font-size: 20vw;
+
+    @media #{$mq-large} {
+        font-size: 12.5em;
+    }
+}
+
+.i-button-wrapper {
+    @extend .clearfix;
+    position: relative;
+    width: 35px;
+    margin: 0 auto;
+}

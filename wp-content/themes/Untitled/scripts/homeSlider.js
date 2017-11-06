@@ -9,7 +9,8 @@ function homeSlider() {
         arrows: false,
         autoplaySpeed: 1000,
         infinite: true,
-        //adaptiveHeight: true,
+        //fade: true,
+        //cssEase: 'linear',
         slidesToShow: 1,
         slidesToScroll: 1
     });

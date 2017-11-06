@@ -15,8 +15,9 @@ $neutral: #808080;
 $darkNeutral: #808081;
 
 $primary: #e2e2e2; //Primary Brand Color
-$lightPrimary:#d9d9d9;
-$darkPrimary:#ff0000;
+$lightPrimary:#fff6d7;
+$darkPrimary:#000;
+
 $secondary: #949599; //Brand Secondary
 $lightSecondary:#d9d9d9;
 $darkSecondary:#000;
@@ -24,8 +25,9 @@ $darkSecondary:#000;
 $body-font-color: #000;
 
 /* fonts */
-$body-font:'Roboto', sans-serif;
-$heading-font:Helvetica, Arial, sans-serif;
+$body-font:'SS-Regular', Arial, sans-serif;
+$heading-font:'SS-Bold', Arial, sans-serif;
+$light-font:'SS-Light', Arial, sans-serif;
 
 /*font-sizes*/
 $font-size-xsmall:12px;
