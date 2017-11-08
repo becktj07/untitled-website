@@ -5,10 +5,11 @@ $(document).ready(function () {
 
 function homeSlider() {
     $('.home-slider').slick({
-        autoplay: true,
+        autoplay: false,
         arrows: false,
         autoplaySpeed: 1000,
         infinite: true,
+        adaptiveheight: true,
         //fade: true,
         //cssEase: 'linear',
         slidesToShow: 1,

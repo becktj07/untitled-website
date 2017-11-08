@@ -6,9 +6,9 @@
 <section class="information wrapper">
 
 <div class="branding-text-overlay">
-    <h1>Untitled</h1>
-    <h1>Creative</h1>
-    <h1>Studio</h1>
+<div><img src="<?php echo get_template_directory_uri(); ?>/images/untitled-yellow.svg" class="image-contain branding-text-overlay untitled" /></div>
+<div><img src="<?php echo get_template_directory_uri(); ?>/images/creative-yellow.svg" class="image-contain branding-text-overlay creative" /></div>
+<div><img src="<?php echo get_template_directory_uri(); ?>/images/studio-yellow.svg" class="image-contain branding-text-overlay studio" /></div>
 </div>
 
     <div class="info-flex-container">
@@ -72,7 +72,7 @@
 
 <div class="x-button-wrapper">
 	<a href="<?php echo site_url(); ?>">
-		<img src="/<?php echo get_template_directory_uri(); ?>/images/x-button.svg" class="" />
+		<img src="<?php echo get_template_directory_uri(); ?>/images/x-button.svg" class="" />
 	</a>
 </div>
 
