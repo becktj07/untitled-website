@@ -787,7 +787,7 @@ picture {
   position: relative;
   width: 100%;
   padding: 0 20px;
-  max-width: 940px;
+  max-width: 1040px;
   margin: 0 auto; }
 
 .full-screen-width {
@@ -1619,9 +1619,9 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     font-size: 1em;
     line-height: 1em;
     font-family: "SS-Bold", Arial, sans-serif;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    border-bottom: 3px solid #000;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    border-bottom: 2.5px solid #000;
     color: #000;
     text-transform: uppercase;
     display: inline-block; }
@@ -1634,8 +1634,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     order: 2; }
     @media only screen and (min-width: 768px) {
       .info-flex-container .info-headings {
-        -ms-flex-preferred-size: 25%;
-        flex-basis: 25%;
+        -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
         order: 1; } }
@@ -1645,7 +1645,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       margin: 0 0 30px 0; }
     .info-flex-container .info-headings li {
       font-size: .95em;
-      line-height: 1.85em; }
+      line-height: 1.75em; }
   .info-flex-container .info-description {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1654,8 +1654,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     order: 1; }
     @media only screen and (min-width: 768px) {
       .info-flex-container .info-description {
-        -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
+        -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
         -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
         order: 2; } }
@@ -1683,16 +1683,17 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     font-size: 1em;
     line-height: 1em;
     font-family: "SS-Bold", Arial, sans-serif;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    border-bottom: 4px solid #000;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+    border-bottom: 2.5px solid #000;
     color: #000;
     text-transform: uppercase; }
   .info-flex-container--lower h2.potential-projects {
-    text-transform: none; }
+    text-transform: none;
+    margin-bottom: 12px; }
     @media only screen and (min-width: 768px) {
       .info-flex-container--lower h2.potential-projects {
-        margin-top: 18px; } }
+        margin-top: 0px; } }
   .info-flex-container--lower .info-headings {
     text-align: right;
     -ms-flex-preferred-size: 100%;
@@ -1702,15 +1703,15 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     order: 1; }
     @media only screen and (min-width: 768px) {
       .info-flex-container--lower .info-headings {
-        -ms-flex-preferred-size: 25%;
-        flex-basis: 25%; } }
+        -ms-flex-preferred-size: 30%;
+        flex-basis: 30%; } }
     .info-flex-container--lower .info-headings ul {
       list-style: none;
       padding: 0;
       margin: 0 0 30px 0; }
     .info-flex-container--lower .info-headings li {
       font-size: .95em;
-      line-height: 1.85em; }
+      line-height: 1.75em; }
   .info-flex-container--lower .info-description {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1720,13 +1721,18 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     text-align: right; }
     @media only screen and (min-width: 768px) {
       .info-flex-container--lower .info-description {
-        -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
+        -ms-flex-preferred-size: 65%;
+        flex-basis: 65%;
         text-align: left; } }
     .info-flex-container--lower .info-description ul {
       list-style: none;
       padding: 0;
       margin: 0 0 30px 0; }
+    .info-flex-container--lower .info-description li {
+      letter-spacing: .025em;
+      font-size: 1.15em;
+      line-height: 1.25em;
+      margin-bottom: 15px; }
     .info-flex-container--lower .info-description p {
       letter-spacing: .025em;
       font-size: 1.15em; }
@@ -1750,13 +1756,17 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   position: absolute;
   top: -1vh;
   height: 100%; }
+  @media only screen and (min-width: 768px) {
+    .branding-text-overlay {
+      top: -2vh; } }
+  @media only screen and (min-width: 980px) {
+    .branding-text-overlay {
+      top: -2vh; } }
   .branding-text-overlay div {
-    background-color: green;
-    border: 1px solid red;
     z-index: -2;
     width: 100%;
     height: 20vh;
-    max-height: 120px;
+    max-height: 100px;
     position: relative;
     margin-bottom: 7px;
     display: block;
@@ -1773,12 +1783,27 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 
 .untitled {
   width: 110vw; }
+  @media only screen and (min-width: 980px) {
+    .untitled {
+      left: 5%; } }
 
 .creative {
   width: 98vw; }
+  @media only screen and (min-width: 980px) {
+    .creative {
+      left: 5%; } }
 
 .studio {
   width: 70vw; }
+  @media only screen and (min-width: 768px) {
+    .studio {
+      width: 77vw; } }
+  @media only screen and (min-width: 980px) {
+    .studio {
+      max-width: 715px;
+      min-width: 600px;
+      left: 5%;
+      top: -40px; } }
 
 /* Slider */
 .slick-slider {

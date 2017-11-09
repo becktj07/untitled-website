@@ -19,9 +19,9 @@
 		font-size: 1em;
 		line-height: 1em;
 		font-family: $heading-font;
-		padding-bottom: 5px;
-		margin-bottom: 10px;
-		border-bottom: 3px solid #000;
+		padding-bottom: 4px;
+		margin-bottom: 8px;
+		border-bottom: 2.5px solid #000;
 		color: #000;
 		text-transform: uppercase;
 		display: inline-block;
@@ -33,7 +33,7 @@
 		order: 2;
 	
 		@media #{$mq-medium} {
-			flex-basis: 25%;
+			flex-basis: 30%;
 			order: 1;
 		}
 	
@@ -45,7 +45,7 @@
 	
 		li {
 			font-size: .95em;
-			line-height: 1.85em;
+			line-height: 1.75em;
 		}
 	}
 	
@@ -54,7 +54,7 @@
 		order: 1;
 	
 		@media #{$mq-medium} {
-			flex-basis: 70%;
+			flex-basis: 65%;
 			order: 2;
 		}
 	
@@ -89,18 +89,19 @@
 		font-size: 1em;
 		line-height: 1em;
 		font-family: $heading-font;
-		padding-bottom: 5px;
-		margin-bottom: 10px;
-		border-bottom: 4px solid #000;
+		padding-bottom: 4px;
+		margin-bottom: 8px;
+		border-bottom: 2.5px solid #000;
 		color: #000;
 		text-transform: uppercase;
 	}
 
 	h2.potential-projects {
 		text-transform: none;
+		margin-bottom: 12px;
 
 		@media #{$mq-medium} {
-			margin-top:18px;
+			margin-top:0px;
 		}
 
 	}
@@ -111,7 +112,7 @@
 		order: 1;
 	
 		@media #{$mq-medium} {
-			flex-basis: 25%;
+			flex-basis: 30%;
 		}
 	
 		ul {
@@ -122,7 +123,7 @@
 	
 		li {
 			font-size: .95em;
-			line-height: 1.85em;
+			line-height: 1.75em;
 		}
 	}
 	
@@ -132,7 +133,7 @@
 		text-align: right;
 	
 		@media #{$mq-medium} {
-			flex-basis: 70%;
+			flex-basis: 65%;
 			text-align: left;
 		}
 	
@@ -143,7 +144,10 @@
 		}
 	
 		li {
-			
+			letter-spacing: .025em;
+			font-size: 1.15em;
+			line-height: 1.25em;
+			margin-bottom: 15px;
 		}
 	
 		p {
@@ -173,20 +177,25 @@
 }
 
 //Animated Text
-
 .branding-text-overlay {
 	width: calc(100% - 40px);
 	position: absolute;
 	top: -1vh;
 	height: 100%;
 
+	@media #{$mq-medium} {
+		top: -2vh;
+	}
+
+	@media #{$mq-large} {
+		top: -2vh;
+	}
+
 	div {
-		background-color: green;
-		border: 1px solid red;
 		z-index: -2;
 		width:100%;
 		height:20vh;
-		max-height:120px;
+		max-height:100px;
 		position: relative;
 		margin-bottom: 7px;
 		display: block;
@@ -208,12 +217,31 @@
 
 .untitled {
 	width:110vw;
+
+	@media #{$mq-large} {
+		left: 5%;
+	}
 }
 
 .creative {
 	width:98vw;
+
+	@media #{$mq-large} {
+		left: 5%;
+	}
 }
 
 .studio {
 	width:70vw;
+	
+	@media #{$mq-medium} {
+		width:77vw;
+	}
+
+	@media #{$mq-large} {
+		max-width:715px;
+		min-width: 600px;
+		left: 5%;
+		top: -40px;
+	}
 }

@@ -36,7 +36,7 @@
     @include centerer;
     z-index: 999;
     font-size: 20vw;
-    width: calc(100% - 20px;);
+    width: calc(100% - 20px);
 
     @media #{$mq-large} {
         font-size: 12.5em;
