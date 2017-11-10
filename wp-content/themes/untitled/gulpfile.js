@@ -19,8 +19,7 @@ gulp.task('sass', function () {
 gulp.task('browser-sync', function() {
     browserSync.init({
         proxy: {
-            target: "http://localhost:8888/untitled/"
-        }
+            target: "http://localhost:8888/untitled/"}
     });
 });
 
