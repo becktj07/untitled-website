@@ -82,6 +82,7 @@
 
     .slick-initialized & {
         display: block;
+        visibility: visible;
     }
 
     .slick-loading & {

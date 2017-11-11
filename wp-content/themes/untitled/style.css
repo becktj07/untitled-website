@@ -1539,10 +1539,6 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 .home-slider__outer-wrapper {
   position: relative;
   height: 100vh; }
-  @media only screen and (min-width: 980px) {
-    .home-slider__outer-wrapper {
-      margin-top: 75px;
-      max-height: 900px; } }
 
 .home-slider__inner-wrapper {
   position: absolute;
@@ -1554,17 +1550,6 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   max-width: 820px;
   margin: 0 auto 30px auto;
   width: calc(100% - 50px); }
-  @media only screen and (min-width: 768px) {
-    .home-slider__inner-wrapper {
-      width: 100%; } }
-  @media only screen and (min-width: 980px) {
-    .home-slider__inner-wrapper {
-      padding: 0;
-      position: relative;
-      top: auto;
-      left: auto;
-      -webkit-transform: translate(0, 0);
-      transform: translate(0, 0); } }
 
 .home-text-overlay {
   color: #000;
@@ -1583,8 +1568,14 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       font-size: 12.5em;
       max-width: 900px; } }
 
+.home-slider {
+  visibility: hidden; }
+
 .slick-slide {
-  height: 900px !important; }
+  height: 50vh !important; }
+  @media only screen and (min-width: 980px) {
+    .slick-slide {
+      height: 700px !important; } }
   .slick-slide img {
     position: relative;
     top: 50%;
@@ -1754,15 +1745,12 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 .branding-text-overlay {
   width: calc(100% - 40px);
   position: absolute;
-  top: -1vh;
+  top: -3vh;
   height: 100%; }
   @media only screen and (min-width: 768px) {
     .branding-text-overlay {
       top: -2vh; } }
-  @media only screen and (min-width: 980px) {
-    .branding-text-overlay {
-      top: -2vh; } }
-  .branding-text-overlay div {
+  .branding-text-overlay svg {
     z-index: -2;
     width: 100%;
     height: 20vh;
@@ -1772,14 +1760,12 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     display: block;
     float: left; }
     @media only screen and (min-width: 768px) {
-      .branding-text-overlay div {
+      .branding-text-overlay svg {
         height: 248px;
         max-height: 200px; } }
     @media only screen and (min-width: 980px) {
-      .branding-text-overlay div {
+      .branding-text-overlay svg {
         max-height: none; } }
-  .branding-text-overlay img {
-    z-index: -1; }
 
 .untitled {
   width: 110vw; }
@@ -1791,10 +1777,12 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   width: 98vw; }
   @media only screen and (min-width: 980px) {
     .creative {
-      left: 5%; } }
+      left: 5%;
+      top: -15px; } }
 
 .studio {
-  width: 70vw; }
+  width: 70vw;
+  margin: 0; }
   @media only screen and (min-width: 768px) {
     .studio {
       width: 77vw; } }
@@ -1865,7 +1853,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   .slick-slide.dragging img {
     pointer-events: none; }
   .slick-initialized .slick-slide {
-    display: block; }
+    display: block;
+    visibility: visible; }
   .slick-loading .slick-slide {
     visibility: hidden; }
   .slick-vertical .slick-slide {
