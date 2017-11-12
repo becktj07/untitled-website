@@ -1,15 +1,19 @@
 ﻿
 .information {
-	margin-top: 40px;
 	position: relative; 
+	top: 40px;
+	z-index: -1;
 
 	@media #{$mq-medium} {
-		margin-top: 70px;
-		margin-bottom: 20px;
+		top: 70px;
+	}
+	@media #{$mq-large} {
+		@include centerer;
 	}
 }
 
 .info-flex-container {
+	opacity: 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -177,7 +181,7 @@
 }
 
 //Animated Text
-.branding-text-overlay {
+.branding-text-watermark {
 	width: calc(100% - 40px);
 	position: absolute;
 	top: -3vh;
@@ -196,6 +200,7 @@
 		margin-bottom: 7px;
 		display: block;
 		float: left;
+		//opacity: 0;
 
 		@media #{$mq-medium} {
 			height:248px;
@@ -206,37 +211,37 @@
 			max-height: none;
 		}
 	}
-}
 
-.untitled {
-	width:110vw;
+	.untitled {
+		z-index: -4;
 
-	@media #{$mq-xlarge} {
-		left: 5%;
+		@media #{$mq-large} {
+			visibility: hidden;
+		}
 	}
-}
-
-.creative {
-	width:98vw;
-
-	@media #{$mq-xlarge} {
-		left: 5%;
-		top: -15px;
-	}
-}
-
-.studio {
-	width:70vw;
-	margin: 0;
 	
-	@media #{$mq-medium} {
-		width:77vw;
+	.creative {
+		width:94vw;
+	
+		@media #{$mq-xlarge} {
+			left: 5%;
+			top: -30px;
+		}
 	}
-
-	@media #{$mq-xlarge} {
-		max-width:715px;
-		min-width: 600px;
-		left: 5%;
-		top: -40px;
+	
+	.studio {
+		width:70vw;
+		margin: 0;
+		
+		@media #{$mq-medium} {
+			width:77vw;
+		}
+	
+		@media #{$mq-xlarge} {
+			max-width:820px;
+			min-width: 600px;
+			left: 5%;
+			top: -35px;
+		}
 	}
 }
