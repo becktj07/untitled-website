@@ -10,6 +10,7 @@
     max-width: 1000px;
     margin: 0 auto;
     width: calc(100% - 70px);
+    z-index: 990;
 }
 
 .home-text-overlay {
@@ -18,7 +19,7 @@
     width: calc(100% + 50px);
 
     @media #{$mq-large} {
-        max-width: 900px;
+        max-width: 1010px;
     }
 
     svg {
@@ -29,7 +30,7 @@
 
 .home-slider {
     visibility: hidden;
-    z-index: 990;
+    z-index: 500;
 }
 
 .slick-slide {
@@ -48,8 +49,15 @@
 
 .i-button-wrapper {
     @extend .clearfix;
-    position: relative;
-    top: 30px;
-    width: 35px;
-    margin: 0 auto;
+	position: fixed;
+	bottom: 30px;
+	left: 0;
+	right: 0;
+    width: 36px;
+	margin:30px auto 0 auto;
+	
+	@media #{$mq-medium} {
+		position: relative;
+		bottom: 0px;
+    }
 }

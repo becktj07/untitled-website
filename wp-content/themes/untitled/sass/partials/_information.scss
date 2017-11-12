@@ -2,7 +2,6 @@
 .information {
 	position: relative; 
 	top: 40px;
-	z-index: -1;
 
 	@media #{$mq-medium} {
 		top: 70px;
@@ -165,21 +164,6 @@
 	}
 }
 
-.x-button-wrapper {
-    @extend .clearfix;
-	position: fixed;
-	bottom: 30px;
-	left: 0;
-	right: 0;
-    width: 28px;
-	margin: 0 auto;
-	
-	@media #{$mq-medium} {
-		position: relative;
-		bottom: 0px;
-    }
-}
-
 //Animated Text
 .branding-text-watermark {
 	width: calc(100% - 40px);
@@ -215,13 +199,13 @@
 	.untitled {
 		z-index: -4;
 
-		@media #{$mq-large} {
+		@media #{$mq-medium} {
 			visibility: hidden;
 		}
 	}
 	
 	.creative {
-		width:94vw;
+		width:90vw;
 	
 		@media #{$mq-xlarge} {
 			left: 5%;
