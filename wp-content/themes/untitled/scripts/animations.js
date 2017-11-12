@@ -48,8 +48,9 @@ function mobileFunctions() {
     $('.button-trigger').click(function(e) {
         e.preventDefault();
         $('.home-slider').animate({ opacity: 0 }, 350, function(){
-            $('.home-text-overlay').animate({ opacity: '0',}, 500,); 
             $('.info-flex-container').animate({ opacity: 1}, 500);
+            $('.home-text-overlay').animate({ top: '0',}, 500,);
+            $('.home-text-overlay').css('z-index', -3);
             $('.home-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'}); 
         });
     })

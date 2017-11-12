@@ -696,7 +696,7 @@ picture {
 .invisible {
   visibility: hidden; }
 
-.clearfix:before, .wrapper:before, .header:before, .footer__inner:before, .card-wrapper__inner:before, .header-image:before, .full-width-text:before, .text-half-width:before, .text-two-thirds:before, .grid-wrapper:before, .image-slider:before, .full-screen-image:before, .i-button-wrapper:before,
+.clearfix:before, .wrapper:before, .header:before, .footer__inner:before, .card-wrapper__inner:before, .header-image:before, .full-width-text:before, .text-half-width:before, .text-two-thirds:before, .grid-wrapper:before, .image-slider:before, .full-screen-image:before, .i-button-wrapper:before, .x-button-wrapper:before,
 .clearfix:after,
 .wrapper:after,
 .header:after,
@@ -709,13 +709,14 @@ picture {
 .grid-wrapper:after,
 .image-slider:after,
 .full-screen-image:after,
-.i-button-wrapper:after {
+.i-button-wrapper:after,
+.x-button-wrapper:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .wrapper:after, .header:after, .footer__inner:after, .card-wrapper__inner:after, .header-image:after, .full-width-text:after, .text-half-width:after, .text-two-thirds:after, .grid-wrapper:after, .image-slider:after, .full-screen-image:after, .i-button-wrapper:after {
+.clearfix:after, .wrapper:after, .header:after, .footer__inner:after, .card-wrapper__inner:after, .header-image:after, .full-width-text:after, .text-half-width:after, .text-two-thirds:after, .grid-wrapper:after, .image-slider:after, .full-screen-image:after, .i-button-wrapper:after, .x-button-wrapper:after {
   clear: both; }
 
 /* ==========================================================================
@@ -1549,8 +1550,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  width: calc(100% - 70px);
-  z-index: 990; }
+  width: calc(100% - 70px); }
 
 .home-text-overlay {
   position: absolute;
@@ -1562,14 +1562,14 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   width: calc(100% + 50px); }
   @media only screen and (min-width: 980px) {
     .home-text-overlay {
-      max-width: 1010px; } }
+      max-width: 900px; } }
   .home-text-overlay svg {
     max-width: 100%;
     display: block; }
 
 .home-slider {
   visibility: hidden;
-  z-index: 500; }
+  z-index: 990; }
 
 .slick-slide {
   height: 50vh !important; }
@@ -1583,20 +1583,15 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     transform: translateY(-50%); }
 
 .i-button-wrapper {
-  position: fixed;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  width: 36px;
-  margin: 30px auto 0 auto; }
-  @media only screen and (min-width: 768px) {
-    .i-button-wrapper {
-      position: relative;
-      bottom: 0px; } }
+  position: relative;
+  top: 30px;
+  width: 35px;
+  margin: 0 auto; }
 
 .information {
   position: relative;
-  top: 40px; }
+  top: 40px;
+  z-index: -1; }
   @media only screen and (min-width: 768px) {
     .information {
       top: 70px; } }
@@ -1743,6 +1738,18 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       .info-flex-container--lower .info-description p:first-of-type {
         margin-top: -5px; }
 
+.x-button-wrapper {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: 28px;
+  margin: 0 auto; }
+  @media only screen and (min-width: 768px) {
+    .x-button-wrapper {
+      position: relative;
+      bottom: 0px; } }
+
 .branding-text-watermark {
   width: calc(100% - 40px);
   position: absolute;
@@ -1769,11 +1776,11 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
         max-height: none; } }
   .branding-text-watermark .untitled {
     z-index: -4; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 980px) {
       .branding-text-watermark .untitled {
         visibility: hidden; } }
   .branding-text-watermark .creative {
-    width: 90vw; }
+    width: 94vw; }
     @media only screen and (min-width: 980px) {
       .branding-text-watermark .creative {
         left: 5%;
