@@ -22,7 +22,7 @@
 		?>
 	</figure>
 	<div class="desktop-button-wrapper">
-		<a href="<?php echo site_url(); ?>" class="button-trigger">
+		<a href="<?php echo site_url(); ?>" class="info-button-trigger">
 			<div class="button-border">
 				<div class="sprite-i"></div>
 			</div>
@@ -104,8 +104,10 @@
 		</div>
 	</section>
 	<div class="mobile-button-wrapper">
-		<a href="<?php echo site_url(); ?>/information" class="button-trigger">
-			<img src="<?php echo get_template_directory_uri(); ?>/images/i-button.svg" class="image-contain" />
+		<a href="<?php echo site_url(); ?>" class="info-button-trigger">
+			<div class="button-border">
+				<div class="sprite-i"></div>
+			</div>
 		</a>
 	</div>
 </div>

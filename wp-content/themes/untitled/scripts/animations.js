@@ -1,45 +1,39 @@
-$(window).smartresize(function() {
-    runFunctionsBasedOnScreenSize();
-});
 
 $(document).ready(function() {
     runFunctionsBasedOnScreenSize();
 });
 
-var $window = $(window), isMobile = false;
-
-if (window.matchMedia("screen and (min-width: 768px)").matches) {
-    isMobile = false;
-} else {
-    isMobile = true;
-}
+var $window = $(window);
+var isMobile = false;
 
 $window.smartresize(function() {
     if (window.matchMedia("screen and (min-width: 768px)").matches) {
         isMobile = false;
-        mobileFunctions();
+        console.log('SMR Mobile');
     } else {
-        isMobile = true;
-        desktopFunctions();
+        console.log('SMR Desktop');
     }
 })
 
 function runFunctionsBasedOnScreenSize() {
     if(isMobile) {
-        console.log('This is a mobile device');
+        console.log('runFunctionsBasedOnScreenSize Mobile');
         mobileFunctions();
     } else if(!isMobile) {
-        console.log('This is a desktop computer');
+        console.log('runFunctionsBasedOnScreenSize Desktop');
         desktopFunctions();
     }
 }
 
 function desktopFunctions() {
     initializeDesktopInfo();
-    clearDesktop();
+    restoreDesktopSlider();
+
     function initializeDesktopInfo() {
-        $('.button-trigger').click(function(e) {
+        $('.info-button-trigger').click(function(e) {
             e.preventDefault();
+            console.log('initializeDesktopInfo');
+            $(this).removeClass('info-button-trigger').addClass('x-button-trigger');
             $('.sprite-i').animate({ opacity: 0}, 500, function(){
                 $(this).removeClass('sprite-i').addClass('sprite-x').animate({ opacity: 1}, 500);
                 $('.home-text-overlay').animate({ top: '100px'}, 300);
@@ -47,10 +41,9 @@ function desktopFunctions() {
                 $('.creative').animate({ opacity: 1 }, 300);
                 setTimeout(function(){
                     $('.studio').animate({ opacity: 1 }, 300);
-                            //do this stuff after 250
-                    }, 250);
-                $('.home-text-overlay').css('z-index', -3);
-                $('.information').css('z-index', 0);
+                    $('.home-text-overlay').css('z-index', -3);
+                    $('.information').css('z-index', 0);
+                }, 100);
             }); 
             $('.home-slider').animate({ opacity: 0 }, 1200, function(){
                 setTimeout(function(){
@@ -59,17 +52,26 @@ function desktopFunctions() {
             });
         })
     }
-    function clearDesktop() {
-    
-    }
+
+     function restoreDesktopSlider() {
+         $('.x-button-trigger').click(function(e) {
+             e.preventDefault();
+             console.log('restoreDesktopSlider');
+             $('.sprite-x').animate({ opacity: 0}, 500, function(){
+                $(this).removeClass('sprite-x').addClass('sprite-i').animate({ opacity: 1}, 500);
+                $('.info-flex-container').animate({ opacity: 0}, 750, function(){
+                     setTimeout(function(){
+                         $('.studio').animate({ opacity: 0 }, 300);
+                     }, 250);
+                    $('.creative').animate({ opacity: 0 }, 300);
+                    $('.home-text-overlay > svg > g > path').css({fill: '#000', transition: '.25s'});
+                    $('.home-text-overlay').animate({ top: '50%'}, 300);
+                 });
+             });
+         })
+     }
 }
 
 function mobileFunctions() {
-    $('.button-trigger').click(function(e) {
-        e.preventDefault();
-        $('.home-slider').animate({ opacity: 0 }, 350, function(){
-            $('.home-text-overlay').animate({ opacity: 0}, 500);
-            $('.info-flex-container').animate({ opacity: 1}, 500);
-        });
-    })
-};
+
+}

@@ -1579,7 +1579,9 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 .mobile-button-wrapper {
   position: fixed;
   bottom: 8vh;
-  width: 100%; }
+  width: 100%;
+  height: 45px;
+  margin: 0 auto; }
   @media only screen and (min-width: 980px) {
     .mobile-button-wrapper {
       display: none; } }
@@ -1591,13 +1593,14 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       display: block;
       position: relative;
       top: 30px;
-      width: 35px;
-      height: 35px;
+      width: 45px;
+      height: 45px;
       margin: 0 auto; } }
 
 .button-border {
   width: 36px;
   height: 36px;
+  margin: 0 auto;
   border-radius: 50%;
   border: 4px solid #000; }
 
@@ -1802,11 +1805,9 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     @media only screen and (min-width: 980px) {
       .branding-text-watermark svg {
         max-height: none; } }
-  .branding-text-watermark .untitled {
-    opacity: 0; }
-    @media only screen and (min-width: 980px) {
-      .branding-text-watermark .untitled {
-        visibility: hidden; } }
+  @media only screen and (min-width: 980px) {
+    .branding-text-watermark .untitled {
+      visibility: hidden; } }
   .branding-text-watermark .creative {
     width: 94vw;
     opacity: 0; }
@@ -1823,10 +1824,10 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
         width: 77vw; } }
     @media only screen and (min-width: 980px) {
       .branding-text-watermark .studio {
-        max-width: 820px;
+        max-width: 780px;
         min-width: 600px;
         left: 5%;
-        top: -35px; } }
+        top: -30px; } }
 
 /* Slider */
 .slick-slider {
