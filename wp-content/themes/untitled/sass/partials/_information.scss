@@ -208,7 +208,8 @@
 	}
 
 	.untitled {
-
+		opacity: 0;
+		
 		@media #{$mq-large} {
 			visibility: hidden;
 		}

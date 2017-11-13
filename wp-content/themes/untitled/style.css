@@ -1805,9 +1805,11 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     @media only screen and (min-width: 980px) {
       .branding-text-watermark svg {
         max-height: none; } }
-  @media only screen and (min-width: 980px) {
-    .branding-text-watermark .untitled {
-      visibility: hidden; } }
+  .branding-text-watermark .untitled {
+    opacity: 0; }
+    @media only screen and (min-width: 980px) {
+      .branding-text-watermark .untitled {
+        visibility: hidden; } }
   .branding-text-watermark .creative {
     width: 94vw;
     opacity: 0; }
