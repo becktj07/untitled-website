@@ -155,14 +155,6 @@ picture {
     display: inline-block;
 }
 
-.button-wrapper {
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-    height: 37px;
-    margin-top: 40px;
-}
-
 .cta-button {
     @include box-sizing;
     font-size:$font-size-button;

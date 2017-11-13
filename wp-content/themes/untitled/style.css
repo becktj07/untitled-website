@@ -578,13 +578,6 @@ picture {
   height: 100%;
   display: inline-block; }
 
-.button-wrapper {
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-  height: 37px;
-  margin-top: 40px; }
-
 .cta-button {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -696,7 +689,7 @@ picture {
 .invisible {
   visibility: hidden; }
 
-.clearfix:before, .wrapper:before, .header:before, .footer__inner:before, .card-wrapper__inner:before, .header-image:before, .full-width-text:before, .text-half-width:before, .text-two-thirds:before, .grid-wrapper:before, .image-slider:before, .full-screen-image:before, .i-button-wrapper:before, .x-button-wrapper:before,
+.clearfix:before, .wrapper:before, .header:before, .footer__inner:before, .card-wrapper__inner:before, .header-image:before, .full-width-text:before, .text-half-width:before, .text-two-thirds:before, .grid-wrapper:before, .image-slider:before, .full-screen-image:before, .mobile-button-wrapper:before, .desktop-button-wrapper:before, .x-button-wrapper:before,
 .clearfix:after,
 .wrapper:after,
 .header:after,
@@ -709,14 +702,15 @@ picture {
 .grid-wrapper:after,
 .image-slider:after,
 .full-screen-image:after,
-.i-button-wrapper:after,
+.mobile-button-wrapper:after,
+.desktop-button-wrapper:after,
 .x-button-wrapper:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .wrapper:after, .header:after, .footer__inner:after, .card-wrapper__inner:after, .header-image:after, .full-width-text:after, .text-half-width:after, .text-two-thirds:after, .grid-wrapper:after, .image-slider:after, .full-screen-image:after, .i-button-wrapper:after, .x-button-wrapper:after {
+.clearfix:after, .wrapper:after, .header:after, .footer__inner:after, .card-wrapper__inner:after, .header-image:after, .full-width-text:after, .text-half-width:after, .text-two-thirds:after, .grid-wrapper:after, .image-slider:after, .full-screen-image:after, .mobile-button-wrapper:after, .desktop-button-wrapper:after, .x-button-wrapper:after {
   clear: both; }
 
 /* ==========================================================================
@@ -1582,11 +1576,45 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%); }
 
-.i-button-wrapper {
-  position: relative;
-  top: 30px;
-  width: 35px;
-  margin: 0 auto; }
+.mobile-button-wrapper {
+  position: fixed;
+  bottom: 8vh;
+  width: 100%; }
+  @media only screen and (min-width: 980px) {
+    .mobile-button-wrapper {
+      display: none; } }
+
+.desktop-button-wrapper {
+  display: none; }
+  @media only screen and (min-width: 980px) {
+    .desktop-button-wrapper {
+      display: block;
+      position: relative;
+      top: 30px;
+      width: 35px;
+      height: 35px;
+      margin: 0 auto; } }
+
+.button-border {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 4px solid #000; }
+
+.sprite-i {
+  width: 36px;
+  height: 36px;
+  background-image: url("/untitled/wp-content/themes/untitled/images/x-i-sprite.svg");
+  background-repeat: no-repeat;
+  background-position: -4px -47px; }
+
+.sprite-x {
+  width: 36px;
+  height: 36px;
+  background-image: url("/untitled/wp-content/themes/untitled/images/x-i-sprite.svg");
+  background-repeat: no-repeat;
+  background-position: -4px -4px;
+  opacity: 0; }
 
 .information {
   position: relative;
@@ -1775,18 +1803,20 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       .branding-text-watermark svg {
         max-height: none; } }
   .branding-text-watermark .untitled {
-    z-index: -4; }
+    opacity: 0; }
     @media only screen and (min-width: 980px) {
       .branding-text-watermark .untitled {
         visibility: hidden; } }
   .branding-text-watermark .creative {
-    width: 94vw; }
+    width: 94vw;
+    opacity: 0; }
     @media only screen and (min-width: 980px) {
       .branding-text-watermark .creative {
         left: 5%;
         top: -30px; } }
   .branding-text-watermark .studio {
     width: 70vw;
+    opacity: 0;
     margin: 0; }
     @media only screen and (min-width: 768px) {
       .branding-text-watermark .studio {
