@@ -1,21 +1,17 @@
 
+var iButton = $("#i-button-trigger");
+var xButton = $("#x-button-trigger");
 var windowWidth = $(window).width();
 
 $(document).ready(function() {
-    checkSize();
-    console.log("document ready " + $(window).width());
-});
-
-$(window).resize(function() {
-    console.log("resize " + $(window).width());
+    desktopAnimations();
 });
 
 function checkSize() {
     if (windowWidth <= 890) {
-        mobileFunctions();
+        //mobileAnimations();
     } else {
-        restoreDesktopSlider();
-        initializeDesktopInfo();
+        desktopAnimations();
     }
 }
 
@@ -27,11 +23,11 @@ $(window).resize(function () {
     }
 });
 
-function initializeDesktopInfo() {
-    $('.info-button-trigger').on( "click", function(bindClickInfo) {
-        bindClickInfo.preventDefault();
-        console.log('initializeDesktopInfo');
-        $(this).removeClass('info-button-trigger').addClass('x-button-trigger');
+function desktopAnimations(){
+    $(document).on("click","#info-button-trigger",function(iButtonClick){
+        iButtonClick.stopImmediatePropagation();
+        iButtonClick.preventDefault();
+        $(this).removeAttr('id', 'i-button-trigger').attr('id', 'x-button-trigger');
         $('.sprite-i').animate({ opacity: 0}, 500, function(){
             $(this).removeClass('sprite-i').addClass('sprite-x').animate({ opacity: 1}, 500);
             $('.home-text-overlay').animate({ top: '100px'}, 300);
@@ -48,28 +44,27 @@ function initializeDesktopInfo() {
                 $('.info-flex-container').animate({ opacity: 1}, 750);
             }, 250);
         });
-    })
-}
-
-function restoreDesktopSlider() {
-    $('.x-button-trigger').on( "click", function(bindClickX) {
-        bindClickX.preventDefault();
-        console.log('restoreDesktopSlider');
+    });
+       
+    $(document).on("click","#x-button-trigger",function(xButtonClick){
+        xButtonClick.stopImmediatePropagation();
+        xButtonClick.preventDefault();
+        $(this).removeAttr('id', 'x-button-trigger').attr('id', 'info-button-trigger');
         $('.sprite-x').animate({ opacity: 0}, 500, function(){
-        $(this).removeClass('sprite-x').addClass('sprite-i').animate({ opacity: 1}, 500);
-        $('.info-flex-container').animate({ opacity: 0}, 750, function(){
+            $(this).removeClass('sprite-x').addClass('sprite-i').animate({ opacity: 1}, 500);
+            $('.info-flex-container').animate({ opacity: 0}, 750, function(){
                 setTimeout(function(){
                     $('.studio').animate({ opacity: 0 }, 300);
                 }, 250);
-            $('.creative').animate({ opacity: 0 }, 300);
-            $('.home-text-overlay > svg > g > path').css({fill: '#000', transition: '.25s'});
-            $('.home-text-overlay').animate({ top: '50%'}, 300).css('z-index', 999);
-            $('.home-slider').animate({ opacity: 1 }, 1200);
+                $('.creative').animate({ opacity: 0 }, 300);
+                $('.home-text-overlay > svg > g > path').css({fill: '#000', transition: '.25s'});
+                $('.home-text-overlay').animate({ top: '50%'}, 300).css('z-index', 999);
+                $('.home-slider').animate({ opacity: 1 }, 1200);
             });
         });
-    })
+    });
 }
 
-function mobileFunctions() {
-
+function mobileAnimations() {
+    
 }

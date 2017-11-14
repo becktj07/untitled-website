@@ -22,7 +22,7 @@
 		?>
 	</figure>
 	<div class="desktop-button-wrapper">
-		<a href="<?php echo site_url(); ?>" class="info-button-trigger">
+		<a href="<?php echo site_url(); ?>" id="info-button-trigger">
 			<div class="button-border">
 				<div class="sprite-i"></div>
 			</div>
