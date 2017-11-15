@@ -7,35 +7,45 @@
 .home-slider__inner-wrapper {
     @include centerer;
     width: 100%;
-    max-width: 1000px;
     margin: 0 auto;
     width: calc(100% - 70px);
+
+    @media #{$mq-medium} {
+        //max-width: 50vw;
+    }
 }
 
-.home-text-overlay {
+.untitled-text-overlay {
     @include centerer;
-    z-index: 999;
-    width: calc(100% + 50px);
+    z-index: 990;
+    width: calc(100% - 40px);
+
+    @media #{$mq-medium} {
+        top: calc(50% - 1.5vh);
+    }
 
     @media #{$mq-large} {
-        max-width: 900px;
+        max-width: 1000px;
     }
 
     svg {
         max-width:100%;
         display: block;
+        margin: 0 auto;
     }
 }
 
 .home-slider {
     visibility: hidden;
     z-index: 990;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .slick-slide {
     height: 50vh!important;
 
-    @media #{$mq-large} {
+    @media #{$mq-medium} {
         height: 700px!important;  //height of the tallest slide
     }
 
@@ -54,7 +64,7 @@
     height:45px;
     margin: 0 auto;
 
-    @media #{$mq-large} {
+    @media #{$mq-medium} {
         display: none;
     }
 }
@@ -62,14 +72,19 @@
 .desktop-button-wrapper {
     display: none;
     @extend .clearfix;
+    z-index: 999;
 
-    @media #{$mq-large} {
+    @media #{$mq-medium} {
         display: block;
         position: relative;
-        top: 30px;
+        top: 40px;
         width: 45px;
         height:45px;
         margin: 0 auto;
+    }
+
+    @media #{$mq-large} {
+        top: 80px;
     }
 }
 

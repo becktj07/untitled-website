@@ -2,7 +2,7 @@
 <?php /* Template Name: Information */ ?>
 
 <?php get_header(); ?>
-
+<main class="mobile">
 <section class="information wrapper">
     <div class="branding-text-watermark">
         <div class="image-contain untitled">
@@ -75,16 +75,15 @@
             </ul>
         </div>
     </div>
+    <div class="mobile-button-wrapper">
+		<a href="<?php echo site_url(); ?>/">
+			<div class="button-border">
+				<div class="sprite-x"></div>
+			</div>
+		</a>
+	</div>
 </section>
-
-<div class="x-button-wrapper">
-	<a class="button-trigger" href="<?php echo site_url(); ?>">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/x-button.svg" class="" />
-	</a>
-</div>
-
-<script src="<?php echo get_template_directory_uri(); ?>/scripts/vendor/smartresize.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/scripts/animations.js"></script>
+</main>
 
 <?php
 get_sidebar();
