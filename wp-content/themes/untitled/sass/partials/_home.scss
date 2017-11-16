@@ -18,14 +18,14 @@
 .untitled-text-overlay {
     @include centerer;
     z-index: 990;
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
 
     @media #{$mq-medium} {
         top: calc(50% - 1.5vh);
     }
 
     @media #{$mq-large} {
-        max-width: 1000px;
+        max-width: 50vw;
     }
 
     svg {
@@ -38,15 +38,20 @@
 .home-slider {
     visibility: hidden;
     z-index: 990;
-    max-width: 1000px;
+
     margin: 0 auto;
+
+    @media #{$mq-xlarge} {
+        max-width: 50vw;
+        max-height: 70vh;
+    }
 }
 
 .slick-slide {
     height: 50vh!important;
 
     @media #{$mq-medium} {
-        height: 700px!important;  //height of the tallest slide
+        height: 70vh!important;  //height of the tallest slide
     }
 
     img {
@@ -78,13 +83,13 @@
         display: block;
         position: relative;
         top: 40px;
-        width: 45px;
-        height:45px;
+        width: 35px;
+        height: 35px;
         margin: 0 auto;
     }
 
     @media #{$mq-large} {
-        top: 80px;
+        top: 60px;
     }
 }
 

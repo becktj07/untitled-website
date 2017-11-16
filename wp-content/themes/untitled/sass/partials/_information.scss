@@ -205,20 +205,27 @@
 		display: block;
 		float: left;
 	}
+
+	.branding-text-watermark--mobile__untitled, .branding-text-watermark--mobile__creative, .branding-text-watermark--mobile__studio {
+		opacity: 0;
+	}
 }
 
 //Animated Text
 .branding-text-watermark--desktop {
     @include centerer;
     z-index: -1;
-    width: calc(100% - 40px);
+	width: calc(100% - 40px);
+	display: none;
 
     @media #{$mq-medium} {
-        top: calc(50% - 1.5vh);
+		top: calc(50% - 1.5vh);
+		display: block;
     }
 
     @media #{$mq-large} {
-        max-width: 1000px;
+		//max-width: 950px;
+		max-width: 50vw;
     }
 
     svg {
@@ -227,11 +234,11 @@
         margin: 0 auto;
 
         @media #{$mq-medium} {
-            margin-bottom:5vh;
+            margin-bottom:3.5vh;
         }
     }
 }
 
-.untitled, .creative, .studio {
-	//opacity: 0;
+.branding-text-watermark--desktop__untitled, .branding-text-watermark--desktop__creative, .branding-text-watermark--desktop__studio {
+	opacity: 0;
 }
