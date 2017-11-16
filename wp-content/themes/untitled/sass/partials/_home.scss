@@ -9,10 +9,7 @@
     width: 100%;
     margin: 0 auto;
     width: calc(100% - 70px);
-
-    @media #{$mq-medium} {
-        //max-width: 50vw;
-    }
+    z-index: 1;
 }
 
 .untitled-text-overlay {
@@ -25,7 +22,7 @@
     }
 
     @media #{$mq-large} {
-        max-width: 50vw;
+        max-width: $wrapper-width;
     }
 
     svg {
@@ -62,6 +59,7 @@
 }
 
 .mobile-button-wrapper {
+    z-index: 999;
     @extend .clearfix;
     position: fixed;
     bottom: 8vh;

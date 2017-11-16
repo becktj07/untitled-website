@@ -2,30 +2,34 @@
 var windowWidth = $(window).width();
 
 $(document).ready(function() {
-    checkSize();
-});
+    testHeight();
 
-function checkSize() {
     if (windowWidth <= 768) {
         mobileAnimations();
     } else {
         desktopAnimations();
     }
-}
+});
 
-//run resize functions
-$(window).resize(function () {
-    if (windowWidth != $(window).width()) {
-        windowWidth = $(window).width();
-        checkSize();
+$(window).resize(function () { 
+    if (windowWidth <= 768) {
+        //mobileClears();
+    } else {
+        //desktopClears();
     }
 });
 
-//$('#i-button-trigger').css({ "pointer-events":"none"}); 
+function testHeight(){
+    // var untitledTextHeight = $('.untitled-text-overlay').height();
+    // var animateHeight = untitledTextHeight / 2;
+    var animateHeight = $('.untitled-text-overlay').outerHeight();
+    var calc = 'calc(50% - "+ animateHeight +px")';
+}
 
 function desktopAnimations(){
     $(document).on("click","#info-button-trigger",function(iButtonClick){
         iButtonClick.preventDefault();
+        iButtonClick.stopPropagation();
         $(this).removeAttr('id', 'info-button-trigger').attr('id', 'x-button-trigger');
         $('.sprite-i').animate({ opacity: 0}, 500, function(){
             $(this).removeClass('sprite-i').addClass('sprite-x').animate({ opacity: 1}, 500);
@@ -47,6 +51,7 @@ function desktopAnimations(){
        
     $(document).on("click","#x-button-trigger",function(xButtonClick){
         xButtonClick.preventDefault();
+        xButtonClick.stopPropagation();
         $(this).removeAttr('id', 'x-button-trigger').attr('id', 'info-button-trigger');
         $('.sprite-x').animate({ opacity: 0}, 500, function(){
             $(this).removeClass('sprite-x').addClass('sprite-i').animate({ opacity: 1}, 500);
@@ -55,9 +60,9 @@ function desktopAnimations(){
                 setTimeout(function(){
                     $('.branding-text-watermark--desktop__creative').animate({ opacity: 0 }, 200);
                 }, 200);
-                $('.untitled-text-overlay > svg > g > path').css({fill: '#000', transition: '.25s'});
                 setTimeout(function(){
                     $('.untitled-text-overlay').animate({ top: '50%'}, 300).css('z-index', 999);
+                    $('.untitled-text-overlay > svg > g > path').css({fill: '#000', transition: '.25s'});
                 }, 200);
                 $('.home-slider').animate({ opacity: 1 }, 1200);
             });
