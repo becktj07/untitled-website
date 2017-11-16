@@ -1,11 +1,9 @@
 ﻿
 .information {
 	position: relative; 
-	top: 40px;
-	z-index: -1;
-
+	z-index: 1;
 	@media #{$mq-medium} {
-		@include centerer;
+		@include centerer
 	}
 }
 
@@ -13,9 +11,16 @@
     @include box-sizing;
     @extend .clearfix;
     width: 100%;
-    padding: $wrapper-padding;
+	padding: $wrapper-padding;
+	padding-top: 60px;
     max-width: $wrapper-width;
 	margin: 0 auto;
+	height:100%;
+
+	@media #{$mq-medium} {
+		height: auto;
+		padding-top: 0px;
+	}
 }
 
 .info-flex-container {
@@ -43,7 +48,7 @@
 		order: 2;
 	
 		@media #{$mq-medium} {
-			flex-basis: 30%;
+			flex-basis: 25%;
 			order: 1;
 		}
 	
@@ -64,7 +69,7 @@
 		order: 1;
 	
 		@media #{$mq-medium} {
-			flex-basis: 65%;
+			flex-basis: 70%;
 			order: 2;
 		}
 	
@@ -107,7 +112,7 @@
 		margin-bottom: 12px;
 
 		@media #{$mq-medium} {
-			margin-top:0px;
+			margin-top:15px;
 		}
 
 	}
@@ -118,7 +123,7 @@
 		order: 1;
 	
 		@media #{$mq-medium} {
-			flex-basis: 30%;
+			flex-basis: 25%;
 		}
 	
 		ul {
@@ -139,7 +144,7 @@
 		text-align: right;
 	
 		@media #{$mq-medium} {
-			flex-basis: 65%;
+			flex-basis: 70%;
 			text-align: left;
 		}
 	
@@ -186,8 +191,7 @@
 .branding-text-watermark--mobile {
 	width: calc(100% - 40px);
 	position: absolute;
-	top: -2vh;
-	height: 100%;
+	top:8vh;
 
 	@media #{$mq-medium} {
 		display: none;
@@ -196,11 +200,9 @@
 	svg {
 		z-index: -2;
 		width:100%;
-		max-height: 110px;
 		position: relative;
-		margin-bottom: 7px;
-		display: block;
-		float: left;
+		left: 3vw;
+		margin-bottom: 5vh;
 	}
 
 	.branding-text-watermark--mobile__untitled, .branding-text-watermark--mobile__creative, .branding-text-watermark--mobile__studio {
@@ -214,7 +216,7 @@
     z-index: -1;
 	width: calc(100% - 40px);
 	display: none;
-	max-width: $wrapper-width;
+	max-width: 960px;
 
     @media #{$mq-medium} {
 		top: calc(50% - 1.5vh);

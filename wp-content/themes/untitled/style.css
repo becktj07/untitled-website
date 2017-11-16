@@ -1564,7 +1564,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       top: calc(50% - 1.5vh); } }
   @media only screen and (min-width: 980px) {
     .untitled-text-overlay {
-      max-width: 1040px; } }
+      max-width: 960px; } }
   .untitled-text-overlay svg {
     max-width: 100%;
     display: block;
@@ -1640,8 +1640,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 
 .information {
   position: relative;
-  top: 40px;
-  z-index: -1; }
+  z-index: 1; }
   @media only screen and (min-width: 768px) {
     .information {
       position: absolute;
@@ -1656,8 +1655,14 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   -webkit-box-sizing: border-box;
   width: 100%;
   padding: 0 20px;
+  padding-top: 60px;
   max-width: 1040px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 100%; }
+  @media only screen and (min-width: 768px) {
+    .information-wrapper {
+      height: auto;
+      padding-top: 0px; } }
 
 .info-flex-container {
   opacity: 0;
@@ -1689,8 +1694,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     order: 2; }
     @media only screen and (min-width: 768px) {
       .info-flex-container .info-headings {
-        -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
         -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
         order: 1; } }
@@ -1709,8 +1714,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     order: 1; }
     @media only screen and (min-width: 768px) {
       .info-flex-container .info-description {
-        -ms-flex-preferred-size: 65%;
-        flex-basis: 65%;
+        -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
         -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
         order: 2; } }
@@ -1748,7 +1753,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     margin-bottom: 12px; }
     @media only screen and (min-width: 768px) {
       .info-flex-container--lower h2.potential-projects {
-        margin-top: 0px; } }
+        margin-top: 15px; } }
   .info-flex-container--lower .info-headings {
     text-align: right;
     -ms-flex-preferred-size: 100%;
@@ -1758,8 +1763,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     order: 1; }
     @media only screen and (min-width: 768px) {
       .info-flex-container--lower .info-headings {
-        -ms-flex-preferred-size: 30%;
-        flex-basis: 30%; } }
+        -ms-flex-preferred-size: 25%;
+        flex-basis: 25%; } }
     .info-flex-container--lower .info-headings ul {
       list-style: none;
       padding: 0;
@@ -1776,8 +1781,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     text-align: right; }
     @media only screen and (min-width: 768px) {
       .info-flex-container--lower .info-description {
-        -ms-flex-preferred-size: 65%;
-        flex-basis: 65%;
+        -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
         text-align: left; } }
     .info-flex-container--lower .info-description ul {
       list-style: none;
@@ -1809,19 +1814,16 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 .branding-text-watermark--mobile {
   width: calc(100% - 40px);
   position: absolute;
-  top: -2vh;
-  height: 100%; }
+  top: 8vh; }
   @media only screen and (min-width: 768px) {
     .branding-text-watermark--mobile {
       display: none; } }
   .branding-text-watermark--mobile svg {
     z-index: -2;
     width: 100%;
-    max-height: 110px;
     position: relative;
-    margin-bottom: 7px;
-    display: block;
-    float: left; }
+    left: 3vw;
+    margin-bottom: 5vh; }
   .branding-text-watermark--mobile .branding-text-watermark--mobile__untitled, .branding-text-watermark--mobile .branding-text-watermark--mobile__creative, .branding-text-watermark--mobile .branding-text-watermark--mobile__studio {
     opacity: 0; }
 
@@ -1834,7 +1836,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   z-index: -1;
   width: calc(100% - 40px);
   display: none;
-  max-width: 1040px; }
+  max-width: 960px; }
   @media only screen and (min-width: 768px) {
     .branding-text-watermark--desktop {
       top: calc(50% - 1.5vh);

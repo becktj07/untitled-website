@@ -22,7 +22,7 @@
     }
 
     @media #{$mq-large} {
-        max-width: $wrapper-width;
+        max-width: 960px;
     }
 
     svg {
@@ -35,7 +35,6 @@
 .home-slider {
     visibility: hidden;
     z-index: 990;
-
     margin: 0 auto;
 
     @media #{$mq-xlarge} {

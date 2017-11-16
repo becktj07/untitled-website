@@ -33,12 +33,12 @@ function desktopAnimations(){
         $(this).removeAttr('id', 'info-button-trigger').attr('id', 'x-button-trigger');
         $('.sprite-i').animate({ opacity: 0}, 500, function(){
             $(this).removeClass('sprite-i').addClass('sprite-x').animate({ opacity: 1}, 500);
-            $('.untitled-text-overlay').animate({ top: '0'}, 300);
+            $('.untitled-text-overlay').animate({ top: '10%'}, 300);
             $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.25s'});
             $('.branding-text-watermark--desktop__creative').animate({ opacity: 1 }, 300);
             setTimeout(function(){
                 $('.branding-text-watermark--desktop__studio').animate({ opacity: 1 }, 300);
-                $('.information').css('z-index', 0);
+                $('.information').css('z-index', 1);
             }, 100);
         }); 
         $('.home-slider').animate({ opacity: 0 }, 1200, function(){
@@ -61,6 +61,7 @@ function desktopAnimations(){
                     $('.branding-text-watermark--desktop__creative').animate({ opacity: 0 }, 200);
                 }, 200);
                 setTimeout(function(){
+                    $('.information').css('z-index', 2);
                     $('.untitled-text-overlay').animate({ top: '50%'}, 300).css('z-index', 999);
                     $('.untitled-text-overlay > svg > g > path').css({fill: '#000', transition: '.25s'});
                 }, 200);
@@ -76,15 +77,19 @@ function mobileAnimations() {
         $(this).removeAttr('id', 'info-button-trigger').attr('id', 'x-button-trigger');
         $('.sprite-i').animate({ opacity: 0}, 500, function(){
             $(this).removeClass('sprite-i').addClass('sprite-x').animate({ opacity: 1}, 500);
-            $('.untitled-text-overlay').animate({ top: '-400px'}, 300);
+            $('.untitled-text-overlay').animate({ top: '80px'}, 300);
             $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.25s'});
-            $('.branding-text-watermark--mobile__untitled').animate({ opacity: 1 }, 300);
-            $('.branding-text-watermark--mobile__creative').animate({ opacity: 1 }, 300);
+            setTimeout(function(){
+                $('.branding-text-watermark--mobile__untitled').animate({ opacity: 1 }, 300);
+            }, 400);
+            setTimeout(function(){
+                $('.branding-text-watermark--mobile__creative').animate({ opacity: 1 }, 300);
+            }, 500);
             setTimeout(function(){
                 $('.branding-text-watermark--mobile__studio').animate({ opacity: 1 }, 300);
                 $('.untitled-text-overlay').css('z-index', -3);
-                $('.information').css('z-index', 0);
-            }, 100);
+                $('.information').css('z-index', 2);
+            }, 600);
         }); 
         $('.home-slider').animate({ opacity: 0 }, 1200, function(){
             setTimeout(function(){
