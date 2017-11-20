@@ -77,7 +77,7 @@ function mobileAnimations() {
         $(this).removeAttr('id', 'info-button-trigger').attr('id', 'x-button-trigger');
         $('.sprite-i').animate({ opacity: 0}, 500, function(){
             $(this).removeClass('sprite-i').addClass('sprite-x').animate({ opacity: 1}, 500);
-            $('.untitled-text-overlay').animate({ top: '80px'}, 300);
+            $('.untitled-text-overlay').animate({ top: '15%'}, 300);
             $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.25s'});
             setTimeout(function(){
                 $('.branding-text-watermark--mobile__untitled').animate({ opacity: 1 }, 300);

@@ -90,6 +90,28 @@
     }
 }
 
+.x-button-wrapper {
+    @extend .clearfix;
+	position: fixed;
+	bottom: 30px;
+	left: 0;
+	right: 0;
+    width: 28px;
+	margin: 0 auto;
+	
+	@media #{$mq-medium} {
+		position: relative;
+		bottom: 0px;
+    }
+}
+
+#x-button-trigger, #info-button-trigger {
+	width: 45px;
+	height: 45px;
+	display: block;
+	margin: 0 auto;
+}
+
 .button-border {
     width: 36px;
     height: 36px;

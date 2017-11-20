@@ -12,7 +12,7 @@
     @extend .clearfix;
     width: 100%;
 	padding: $wrapper-padding;
-	padding-top: 60px;
+	padding-top: 8vh;
     max-width: $wrapper-width;
 	margin: 0 auto;
 	height:100%;
@@ -172,21 +172,6 @@
 	}
 }
 
-.x-button-wrapper {
-    @extend .clearfix;
-	position: fixed;
-	bottom: 30px;
-	left: 0;
-	right: 0;
-    width: 28px;
-	margin: 0 auto;
-	
-	@media #{$mq-medium} {
-		position: relative;
-		bottom: 0px;
-    }
-}
-
 //Animated Text
 .branding-text-watermark--mobile {
 	width: calc(100% - 40px);
@@ -221,7 +206,11 @@
     @media #{$mq-medium} {
 		top: calc(50% - 1.5vh);
 		display: block;
-    }
+	}
+	
+	@media #{$mq-large} {
+		top: calc(50% - 1.5vh);
+	}
 
     svg {
         max-width:100%;

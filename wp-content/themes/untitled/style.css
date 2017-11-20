@@ -693,7 +693,7 @@ picture {
 .invisible {
   visibility: hidden; }
 
-.clearfix:before, .wrapper:before, .header:before, .footer__inner:before, .card-wrapper__inner:before, .header-image:before, .full-width-text:before, .text-half-width:before, .text-two-thirds:before, .grid-wrapper:before, .image-slider:before, .full-screen-image:before, .mobile-button-wrapper:before, .desktop-button-wrapper:before, .information-wrapper:before, .x-button-wrapper:before,
+.clearfix:before, .wrapper:before, .header:before, .footer__inner:before, .card-wrapper__inner:before, .header-image:before, .full-width-text:before, .text-half-width:before, .text-two-thirds:before, .grid-wrapper:before, .image-slider:before, .full-screen-image:before, .mobile-button-wrapper:before, .desktop-button-wrapper:before, .x-button-wrapper:before, .information-wrapper:before,
 .clearfix:after,
 .wrapper:after,
 .header:after,
@@ -708,14 +708,14 @@ picture {
 .full-screen-image:after,
 .mobile-button-wrapper:after,
 .desktop-button-wrapper:after,
-.information-wrapper:after,
-.x-button-wrapper:after {
+.x-button-wrapper:after,
+.information-wrapper:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .wrapper:after, .header:after, .footer__inner:after, .card-wrapper__inner:after, .header-image:after, .full-width-text:after, .text-half-width:after, .text-two-thirds:after, .grid-wrapper:after, .image-slider:after, .full-screen-image:after, .mobile-button-wrapper:after, .desktop-button-wrapper:after, .information-wrapper:after, .x-button-wrapper:after {
+.clearfix:after, .wrapper:after, .header:after, .footer__inner:after, .card-wrapper__inner:after, .header-image:after, .full-width-text:after, .text-half-width:after, .text-two-thirds:after, .grid-wrapper:after, .image-slider:after, .full-screen-image:after, .mobile-button-wrapper:after, .desktop-button-wrapper:after, .x-button-wrapper:after, .information-wrapper:after {
   clear: both; }
 
 /* ==========================================================================
@@ -1616,6 +1616,24 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     .desktop-button-wrapper {
       top: 60px; } }
 
+.x-button-wrapper {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: 28px;
+  margin: 0 auto; }
+  @media only screen and (min-width: 768px) {
+    .x-button-wrapper {
+      position: relative;
+      bottom: 0px; } }
+
+#x-button-trigger, #info-button-trigger {
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin: 0 auto; }
+
 .button-border {
   width: 36px;
   height: 36px;
@@ -1655,7 +1673,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   -webkit-box-sizing: border-box;
   width: 100%;
   padding: 0 20px;
-  padding-top: 60px;
+  padding-top: 8vh;
   max-width: 1040px;
   margin: 0 auto;
   height: 100%; }
@@ -1799,18 +1817,6 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       .info-flex-container--lower .info-description p:first-of-type {
         margin-top: -5px; }
 
-.x-button-wrapper {
-  position: fixed;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  width: 28px;
-  margin: 0 auto; }
-  @media only screen and (min-width: 768px) {
-    .x-button-wrapper {
-      position: relative;
-      bottom: 0px; } }
-
 .branding-text-watermark--mobile {
   width: calc(100% - 40px);
   position: absolute;
@@ -1841,6 +1847,9 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     .branding-text-watermark--desktop {
       top: calc(50% - 1.5vh);
       display: block; } }
+  @media only screen and (min-width: 980px) {
+    .branding-text-watermark--desktop {
+      top: calc(50% - 1.5vh); } }
   .branding-text-watermark--desktop svg {
     max-width: 100%;
     display: block;
