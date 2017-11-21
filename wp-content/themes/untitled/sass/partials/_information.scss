@@ -186,7 +186,7 @@
 		z-index: -2;
 		width:100%;
 		position: relative;
-		left: 3vw;
+		left: 5px;
 		margin-bottom: 5vh;
 	}
 
@@ -218,7 +218,11 @@
         margin: 0 auto;
 
         @media #{$mq-medium} {
-            margin-bottom:3.5vh;
+            margin-bottom:4.5vh;
+		}
+		
+		@media #{$mq-large} {
+            margin-bottom:2.5vh;
         }
     }
 }
