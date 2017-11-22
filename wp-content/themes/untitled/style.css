@@ -693,7 +693,7 @@ picture {
 .invisible {
   visibility: hidden; }
 
-.clearfix:before, .wrapper:before, .header:before, .footer__inner:before, .card-wrapper__inner:before, .header-image:before, .full-width-text:before, .text-half-width:before, .text-two-thirds:before, .grid-wrapper:before, .image-slider:before, .full-screen-image:before, .mobile-button-wrapper:before, .desktop-button-wrapper:before, .x-button-wrapper:before, .information-wrapper:before,
+.clearfix:before, .wrapper:before, .header:before, .footer__inner:before, .card-wrapper__inner:before, .header-image:before, .full-width-text:before, .text-half-width:before, .text-two-thirds:before, .grid-wrapper:before, .image-slider:before, .full-screen-image:before, .mobile-button-wrapper:before, .desktop-button-wrapper:before, .information-wrapper:before,
 .clearfix:after,
 .wrapper:after,
 .header:after,
@@ -708,14 +708,13 @@ picture {
 .full-screen-image:after,
 .mobile-button-wrapper:after,
 .desktop-button-wrapper:after,
-.x-button-wrapper:after,
 .information-wrapper:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.clearfix:after, .wrapper:after, .header:after, .footer__inner:after, .card-wrapper__inner:after, .header-image:after, .full-width-text:after, .text-half-width:after, .text-two-thirds:after, .grid-wrapper:after, .image-slider:after, .full-screen-image:after, .mobile-button-wrapper:after, .desktop-button-wrapper:after, .x-button-wrapper:after, .information-wrapper:after {
+.clearfix:after, .wrapper:after, .header:after, .footer__inner:after, .card-wrapper__inner:after, .header-image:after, .full-width-text:after, .text-half-width:after, .text-two-thirds:after, .grid-wrapper:after, .image-slider:after, .full-screen-image:after, .mobile-button-wrapper:after, .desktop-button-wrapper:after, .information-wrapper:after {
   clear: both; }
 
 /* ==========================================================================
@@ -1576,8 +1575,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   margin: 0 auto; }
   @media only screen and (min-width: 1170px) {
     .home-slider {
-      max-width: 50vw;
-      max-height: 70vh; } }
+      max-width: 50vw; } }
 
 .slick-slide {
   height: 50vh !important; }
@@ -1593,7 +1591,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 .mobile-button-wrapper {
   z-index: 999;
   position: fixed;
-  bottom: 8vh;
+  bottom: 18px;
   width: 100%;
   height: 45px;
   margin: 0 auto; }
@@ -1607,60 +1605,53 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   @media only screen and (min-width: 768px) {
     .desktop-button-wrapper {
       display: block;
-      position: relative;
-      top: 40px;
-      width: 45px;
-      height: 45px;
-      margin: 0 auto; } }
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      height: 32px;
+      margin: 0 auto;
+      z-index: 999; } }
   @media only screen and (min-width: 980px) {
     .desktop-button-wrapper {
-      top: 60px; } }
-
-.x-button-wrapper {
-  position: fixed;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  width: 28px;
-  margin: 0 auto; }
-  @media only screen and (min-width: 768px) {
-    .x-button-wrapper {
-      position: relative;
-      bottom: 0px; } }
+      bottom: 7vh; } }
 
 #x-button-trigger {
-  width: 45px;
-  height: 45px;
+  width: 34px;
+  height: 32px;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
 
 #info-button-trigger {
-  width: 45px;
-  height: 45px;
+  width: 34px;
+  height: 32px;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
 
 .button-border {
-  width: 36px;
-  height: 36px;
+  width: 26px;
+  height: 26px;
   margin: 0 auto;
   border-radius: 50%;
-  border: 4px solid #000; }
+  border: 2.5px solid #000;
+  overflow: hidden; }
 
 .sprite-i {
-  width: 36px;
-  height: 36px;
-  background-image: url("/untitled/wp-content/themes/untitled/images/x-i-sprite.svg");
+  width: 28px;
+  height: 60px;
+  background-image: url(/untitled/wp-content/themes/untitled/images/x-i-sprite.svg);
   background-repeat: no-repeat;
-  background-position: -4px -47px; }
+  background-position: -2px -28px;
+  background-size: contain; }
 
 .sprite-x {
-  width: 36px;
-  height: 36px;
-  background-image: url("/untitled/wp-content/themes/untitled/images/x-i-sprite.svg");
+  width: 28px;
+  height: 60px;
+  background-image: url(/untitled/wp-content/themes/untitled/images/x-i-sprite.svg);
   background-repeat: no-repeat;
-  background-position: -4px -4px;
-  opacity: 0; }
+  background-position: -1px -1px;
+  background-size: contain; }
 
 .information {
   position: relative;
@@ -1862,7 +1853,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     margin: 0 auto; }
     @media only screen and (min-width: 768px) {
       .branding-text-watermark--desktop svg {
-        margin-bottom: 4.5vh; } }
+        margin-bottom: 1.5vh; } }
     @media only screen and (min-width: 980px) {
       .branding-text-watermark--desktop svg {
         margin-bottom: 2.5vh; } }

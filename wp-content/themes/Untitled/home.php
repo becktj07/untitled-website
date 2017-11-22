@@ -48,6 +48,8 @@
 		endif;
 		?>
 	</figure>
+	</section>
+
 	<div class="desktop-button-wrapper">
 		<a href="<?php echo site_url(); ?>" id="info-button-trigger">
 			<div class="button-border">
@@ -55,7 +57,6 @@
 			</div>
 		</a>
 	</div>
-	</section>
 
 	<section class="information information-wrapper">
 	<div class="untitled-text-overlay">

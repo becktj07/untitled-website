@@ -5,13 +5,13 @@ $(window).ready(function () {
 
 function homeSlider() {
     $('.home-slider').slick({
-        autoplay: false,
+        autoplay: true,
         arrows: false,
         autoplaySpeed: 1000,
         infinite: true,
-        adaptiveheight: true,
-        // fade: true,
-        // cssEase: 'linear',
+        useTransform: false,
+        fade: true,
+        cssEase: 'none',
         slidesToShow: 1,
         slidesToScroll: 1
     });
