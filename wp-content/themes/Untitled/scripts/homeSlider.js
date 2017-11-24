@@ -1,6 +1,11 @@
 
 $(window).ready(function () {
-    homeSlider();
+    $('.untitled-text-overlay').animate({ opacity: 1 }, 1500);
+    setTimeout(function(){
+        $('.home-slider').animate({ opacity: 1 }, 1000);
+        $('.home-button-wrapper').animate({ opacity: 1 }, 1000);
+        homeSlider();
+    }, 700);
 });
 
 function homeSlider() {

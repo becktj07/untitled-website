@@ -8,14 +8,15 @@
     @include centerer;
     width: 100%;
     margin: 0 auto;
-    width: calc(100% - 70px);
+    width: calc(100% - 90px);
     z-index: 1;
 }
 
 .untitled-text-overlay {
     @include centerer;
     z-index: 990;
-    width: calc(100% - 20px);
+    width: calc(100% - 40px);
+    opacity: 0;
 
     @media #{$mq-medium} {
         top: calc(50% - 1.5vh);
@@ -32,19 +33,68 @@
     }
 }
 
+//Animated Text
+.branding-text-watermark__creative {
+    @include centerer;
+    z-index: -2;
+    width: calc(100% - 40px);
+    opacity: 0;
+    top: 28vh;
+
+    @media #{$mq-medium} {
+        top: 40vh;
+    }
+
+    @media #{$mq-large} {
+        max-width: 960px;
+    }
+
+    svg {
+        max-width:100%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.branding-text-watermark__studio {
+    @include centerer;
+    z-index: -2;
+    width: calc(100% - 40px);
+    opacity: 0;
+    top: 46vh;
+
+    @media #{$mq-medium} {
+        top: 70vh;
+    }
+
+    @media #{$mq-large} {
+        max-width: 960px;
+    }
+
+    svg {
+        max-width:100%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+ .branding-text-watermark__creative, .branding-text-watermark__studio {
+    opacity: 0;
+}
+
 .home-slider {
     visibility: hidden;
     z-index: 990;
     margin: 0 auto;
+    opacity: 0;
 
     @media #{$mq-xlarge} {
         max-width: 50vw;
-        //max-height: 70vh;
     }
 }
 
 .slick-slide {
-    height: 50vh!important;
+    height: 80vh!important;
 
     @media #{$mq-medium} {
         height: 70vh!important;  //height of the tallest slide
@@ -57,23 +107,15 @@
     }
 }
 
-.mobile-button-wrapper {
+.home-button-wrapper {
     z-index: 999;
+    opacity: 0;
     @extend .clearfix;
     position: fixed;
     bottom: 18px;
     width: 100%;
     height:45px;
     margin: 0 auto;
-
-    @media #{$mq-medium} {
-        display: none;
-    }
-}
-
-.desktop-button-wrapper {
-    display: none;
-    @extend .clearfix;
     z-index: 999;
 
     @media #{$mq-medium} {
@@ -121,8 +163,12 @@
     height: 60px;
     background-image: url(/untitled/wp-content/themes/untitled/images/x-i-sprite.svg);
     background-repeat: no-repeat;
-    background-position: -2px -28px;
+    background-position: -1px -28px;
     background-size: contain;
+
+    @media #{$mq-large} {
+        background-position: -.75px -28px;
+    }
 }
 
 .sprite-x {
@@ -130,6 +176,10 @@
     height: 60px;
     background-image: url(/untitled/wp-content/themes/untitled/images/x-i-sprite.svg);
     background-repeat: no-repeat;
-    background-position: -1px -1px;
+    background-position: -1.5px -1px;
     background-size: contain;
+
+    @media #{$mq-large} {
+        background-position: -1px -1px;
+    }
 }
