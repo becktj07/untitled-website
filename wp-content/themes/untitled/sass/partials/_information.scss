@@ -2,24 +2,43 @@
 .information {
 	position: relative; 
 	z-index: 1;
-	@media #{$mq-medium} {
-		@include centerer
-	}
-}
-
-.information-wrapper {
-    @include box-sizing;
+	@include box-sizing;
     @extend .clearfix;
-    width: 100%;
-	padding: 0 20px;
-	padding-top: 8vh;
+	width: 100%;
+	height:100vh;
     max-width: $wrapper-width;
 	margin: 0 auto;
+	display: table;    
+}
+
+.information-centerer {
+    @include box-sizing;
+    @extend .clearfix;
+	width: 100%;
 	height:100%;
+    max-width: $wrapper-width;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.information-container {
+    position: relative;
+	margin:auto;
+	height: 100vh;
 
 	@media #{$mq-medium} {
-		height: auto;
-		padding-top: 0px;
+		width: 768px;
+		height: 834px;
+	}
+
+	@media #{$mq-large} {
+		width: 980px;
+		height: 715px;
+		padding-top: 30px;
+	}
+
+	@media #{$mq-xlarge} {
+		width: 1040px;
 	}
 }
 
@@ -29,6 +48,12 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	font-family: $light-font;
+	padding: 0 40px;
+	padding-top: 60px;
+
+	@media #{$mq-large} {
+		padding-top: 0;
+	}
 	
 	h2 {
 		font-size: 1em;
@@ -72,6 +97,10 @@
 			flex-basis: 70%;
 			order: 2;
 		}
+
+		@media #{$mq-large} {
+			flex-basis: 68%;
+		}
 	
 		ul {
 			list-style: none;
@@ -95,6 +124,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	font-family: $light-font;
+	padding-top: 0;
 	
 	h2 {
 		font-size: 1em;

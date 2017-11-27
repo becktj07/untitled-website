@@ -1,14 +1,20 @@
 ﻿/* Breakpoints */
-$mq-xsmall: "only screen and (min-width:400px)";
-$mq-small-width: 400px;
-$mq-small: "only screen and (min-width:480px)";
-$mq-small-width: 480px;
+
+$mq-small: "only screen and (min-width:380px)";
+$mq-small-width: 380px;
+
+$mq-phone-landscape: "only screen and (min-width:550px)";
+$mq-phone-landscape-width: 550px;
+
 $mq-medium: "only screen and (min-width:768px)";
 $mq-medium-width: 768px;
+
 $mq-large: "only screen and (min-width:980px)";
 $mq-large-width: 980px;
+
 $mq-xlarge: "only screen and (min-width:1170px)";
 $mq-xlarge-width: 1170px;
+
 $mq-monitor: "only screen and (min-width:1400px)";
 $mq-monitor-width: 1400px;
 

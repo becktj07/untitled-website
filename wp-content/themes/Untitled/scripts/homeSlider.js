@@ -1,11 +1,13 @@
 
 $(window).ready(function () {
-    $('.untitled-text-overlay').animate({ opacity: 1 }, 1500);
+    $('.untitled-text-overlay').animate({ opacity: 1 }, 1200, 'swing');
     setTimeout(function(){
-        $('.home-slider').animate({ opacity: 1 }, 1000);
-        $('.home-button-wrapper').animate({ opacity: 1 }, 1000);
+        $('.home-slider').animate({ opacity: 1 }, 700);
         homeSlider();
-    }, 700);
+    }, 500);
+    setTimeout(function(){
+        $('.home-button-wrapper').animate({ opacity: 1 }, 650);
+    }, 1200);
 });
 
 function homeSlider() {
