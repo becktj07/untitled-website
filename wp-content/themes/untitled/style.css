@@ -1576,16 +1576,16 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   z-index: -2;
   width: calc(100% - 40px);
   opacity: 0;
-  top: 180px; }
+  top: 190px; }
   @media only screen and (min-width: 550px) {
     .branding-text-watermark__creative {
-      top: 68vh; } }
+      top: 240px; } }
   @media only screen and (min-width: 768px) {
     .branding-text-watermark__creative {
-      top: 28vh; } }
+      top: 300px; } }
   @media only screen and (min-width: 980px) {
     .branding-text-watermark__creative {
-      top: 365px;
+      top: 330px;
       max-width: 960px; } }
   .branding-text-watermark__creative svg {
     max-width: 100%;
@@ -1601,16 +1601,16 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   z-index: -2;
   width: calc(100% - 40px);
   opacity: 0;
-  top: 280px; }
+  top: 300px; }
   @media only screen and (min-width: 550px) {
     .branding-text-watermark__studio {
-      top: 115vh; } }
+      top: 400px; } }
   @media only screen and (min-width: 768px) {
     .branding-text-watermark__studio {
-      top: 50vh; } }
+      top: 530px; } }
   @media only screen and (min-width: 980px) {
     .branding-text-watermark__studio {
-      top: 610px;
+      top: 580px;
       max-width: 960px; } }
   .branding-text-watermark__studio svg {
     max-width: 100%;
@@ -1742,8 +1742,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   @media only screen and (min-width: 980px) {
     .information-container {
       width: 980px;
-      height: 715px;
-      padding-top: 30px; } }
+      height: 715px; } }
   @media only screen and (min-width: 1170px) {
     .information-container {
       width: 1040px; } }

@@ -8,7 +8,7 @@
 	height:100vh;
     max-width: $wrapper-width;
 	margin: 0 auto;
-	display: table;    
+	display: table; 
 }
 
 .information-centerer {
@@ -34,7 +34,6 @@
 	@media #{$mq-large} {
 		width: 980px;
 		height: 715px;
-		padding-top: 30px;
 	}
 
 	@media #{$mq-xlarge} {

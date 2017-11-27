@@ -34,18 +34,18 @@
     z-index: -2;
     width: calc(100% - 40px);
     opacity: 0;
-    top: 180px;
+    top: 190px;
     
     @media #{$mq-phone-landscape} {
-        top: 68vh;
+        top: 240px;
     }
 
     @media #{$mq-medium} {
-        top: 28vh;
+        top: 300px;
     }
 
     @media #{$mq-large} {
-        top: 365px;
+        top: 330px;
         max-width: 960px;
     }
 
@@ -65,18 +65,18 @@
     z-index: -2;
     width: calc(100% - 40px);
     opacity: 0;
-    top: 280px;
+    top: 300px;
 
     @media #{$mq-phone-landscape} {
-        top: 115vh;
+        top: 400px;
     }
 
     @media #{$mq-medium} {
-        top: 50vh;
+        top: 530px;
     }
 
     @media #{$mq-large} {
-        top: 610px;
+        top: 580px;
         max-width: 960px;
     }
 

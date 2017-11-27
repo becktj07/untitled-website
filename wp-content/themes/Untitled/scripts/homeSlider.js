@@ -1,13 +1,15 @@
 
 $(window).ready(function () {
-    $('.untitled-text-overlay').animate({ opacity: 1 }, 1200, 'swing');
     setTimeout(function(){
-        $('.home-slider').animate({ opacity: 1 }, 700);
-        homeSlider();
+        $('.untitled-text-overlay').animate({ opacity: 1 }, 1200, 'swing');
     }, 500);
     setTimeout(function(){
-        $('.home-button-wrapper').animate({ opacity: 1 }, 650);
-    }, 1200);
+        $('.home-slider').animate({ opacity: 1 }, 750);
+        homeSlider();
+    }, 900);
+    setTimeout(function(){
+        $('.home-button-wrapper').animate({ opacity: 1 }, 600);
+    }, 1300);
 });
 
 function homeSlider() {
