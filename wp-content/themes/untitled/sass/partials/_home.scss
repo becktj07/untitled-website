@@ -177,26 +177,33 @@
 
 .sprite-i {
     width: 28px;
-    height: 60px;
-    background-image: url(/untitled/wp-content/themes/untitled/images/x-i-sprite.svg);
+    height: 28px;
+    background-image: url(/untitled/wp-content/themes/untitled/images/button-i.svg);
     background-repeat: no-repeat;
-    background-position: -1px -28px;
+    background-position: -.5px -.5px;
     background-size: contain;
 
+    @media #{$mq-medium} {
+        background-position: -1.5px 0px;
+    }
+
     @media #{$mq-large} {
-        background-position: -.75px -28px;
+        background-position: -1.5px -.5px;
     }
 }
 
 .sprite-x {
-    width: 28px;
-    height: 60px;
-    background-image: url(/untitled/wp-content/themes/untitled/images/x-i-sprite.svg);
+    width: 29px;
+    height: 29px;
+    background-image: url(/untitled/wp-content/themes/untitled/images/button-x.svg);
     background-repeat: no-repeat;
-    background-position: -1.5px -1px;
+    background-position: -2px -1px;
     background-size: contain;
 
-    @media #{$mq-large} {
+    @media #{$mq-medium} {
         background-position: -1px -1px;
+    }
+    @media #{$mq-large} {
+        background-position: -2px -1px;
     }
 }
