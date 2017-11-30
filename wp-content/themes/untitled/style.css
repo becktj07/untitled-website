@@ -817,6 +817,10 @@ picture {
   src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Black.ttf"); }
 
 @font-face {
+  font-family: 'SS-SemiBold';
+  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-SemiBold.ttf"); }
+
+@font-face {
   font-family: 'SS-Bold';
   src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Bold.ttf"); }
 
@@ -1692,14 +1696,14 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   height: 28px;
   background-image: url(/untitled/wp-content/themes/untitled/images/button-i.svg);
   background-repeat: no-repeat;
-  background-position: -.5px -.5px;
-  background-size: contain; }
+  background-position: 0 0;
+  background-size: 100%; }
   @media only screen and (min-width: 768px) {
     .sprite-i {
-      background-position: -1.5px 0px; } }
+      background-position: -1px 0px; } }
   @media only screen and (min-width: 980px) {
     .sprite-i {
-      background-position: -1.5px -.5px; } }
+      background-position: -1px 0px; } }
 
 .sprite-x {
   width: 29px;
@@ -1713,7 +1717,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       background-position: -1px -1px; } }
   @media only screen and (min-width: 980px) {
     .sprite-x {
-      background-position: -2px -1px; } }
+      background-position: -2px 0px; } }
 
 .information {
   position: relative;
@@ -1764,7 +1768,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   .info-flex-container h2 {
     font-size: 1em;
     line-height: 1em;
-    font-family: "SS-Bold", Arial, sans-serif;
+    font-family: "SS-SemiBold", Arial, sans-serif;
     padding-bottom: 4px;
     margin-bottom: 8px;
     border-bottom: 2.5px solid #000;
@@ -1833,7 +1837,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   .info-flex-container--lower h2 {
     font-size: 1em;
     line-height: 1em;
-    font-family: "SS-Bold", Arial, sans-serif;
+    font-family: "SS-SemiBold", Arial, sans-serif;
     padding-bottom: 4px;
     margin-bottom: 8px;
     border-bottom: 2.5px solid #000;

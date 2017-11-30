@@ -180,15 +180,15 @@
     height: 28px;
     background-image: url(/untitled/wp-content/themes/untitled/images/button-i.svg);
     background-repeat: no-repeat;
-    background-position: -.5px -.5px;
-    background-size: contain;
+    background-position: 0 0;
+    background-size: 100%;
 
     @media #{$mq-medium} {
-        background-position: -1.5px 0px;
+        background-position: -1px 0px;
     }
 
     @media #{$mq-large} {
-        background-position: -1.5px -.5px;
+        background-position: -1px 0px;
     }
 }
 
@@ -204,6 +204,6 @@
         background-position: -1px -1px;
     }
     @media #{$mq-large} {
-        background-position: -2px -1px;
+        background-position: -2px 0px;
     }
 }

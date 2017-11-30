@@ -65,8 +65,8 @@ function desktopFunctions(){
                 $('.branding-text-watermark__creative').animate({ opacity: 0 }, 650);
             }, 900);
             setTimeout(function(){
-                $('.untitled-text-overlay').animate({ top: '50%'}, 400, 'easeOutCubic').css('z-index', 999);
-                $('.untitled-text-overlay > svg > g > path').css({fill: '#000', transition: '.4s'});
+                $('.untitled-text-overlay').animate({ top: '50%'}, 500, 'easeOutCubic').css('z-index', 999);
+                $('.untitled-text-overlay > svg > g > path').css({fill: '#000', transition: '.5s'});
                 $('.untitled-text-overlay').css('z-index', 999);
             }, 1300);
             setTimeout(function(){
