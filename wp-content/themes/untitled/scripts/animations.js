@@ -18,8 +18,8 @@ function desktopFunctions(){
         $('.home-button-wrapper > a').on('click',function(event) {
             event.preventDefault();
         });
-        $('.sprite-i').animate({ opacity: 0}, 500, function(){
-            $(this).removeClass('sprite-i').addClass('sprite-x').animate({ opacity: 1}, 500);
+        $('svg > #i-icon').animate({ opacity: 0}, 500, function(){
+            $('svg > #x-icon').animate({ opacity: 1}, 500); 
             $('.information-container').css('overflow-y', 'visible');
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 0 }, 1000, 'easeOutCubic');
@@ -53,8 +53,8 @@ function desktopFunctions(){
         $('.home-button-wrapper > a').on('click',function(event) {
             event.preventDefault();
         });
-        $('.sprite-x').animate({ opacity: 0}, 500, function(){
-            $(this).removeClass('sprite-x').addClass('sprite-i').animate({ opacity: 1}, 500);
+        $('svg > #x-icon').animate({ opacity: 0}, 500, function(){
+            $('svg > #i-icon').animate({ opacity: 1}, 500); 
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 0}, 800, 'easeOutCubic');
             }, 200);
@@ -90,8 +90,8 @@ function mobileFunctions() {
         $('.home-button-wrapper > a').on('click',function(event) {
             event.preventDefault();
         });
-        $('.sprite-i').animate({ opacity: 0}, 500, function(){
-            $(this).removeClass('sprite-i').addClass('sprite-x').animate({ opacity: 1}, 500);
+        $('svg > #i-icon').animate({ opacity: 0}, 500, function(){
+            $('svg > #x-icon').animate({ opacity: 1}, 500); 
             $('.information-container').css('overflow-y', 'visible');
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 0 }, 1000);
@@ -107,6 +107,7 @@ function mobileFunctions() {
                 $('.branding-text-watermark__studio').animate({ opacity: 1 }, 650);
                 $('.untitled-text-overlay').css('z-index', -3);
                 $('.information').css('z-index', 2);
+                $('.info-flex-container').css("padding-top", 40);
             }, 1600);
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
@@ -126,8 +127,8 @@ function mobileFunctions() {
         $('.home-button-wrapper > a').on('click',function(event) {
             event.preventDefault();
         });
-        $('.sprite-x').animate({ opacity: 0}, 500, function(){
-            $(this).removeClass('sprite-x').addClass('sprite-i').animate({ opacity: 1}, 500);
+        $('svg > #x-icon').animate({ opacity: 0}, 500, function(){
+            $('svg > #i-icon').animate({ opacity: 1}, 500); 
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 0}, 500, 'easeOutCubic');
             }, 200);

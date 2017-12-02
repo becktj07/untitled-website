@@ -1653,7 +1653,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   position: fixed;
   bottom: 18px;
   width: 100%;
-  height: 45px;
+  height: 28px;
   margin: 0 auto;
   z-index: 999; }
   @media only screen and (min-width: 768px) {
@@ -1670,43 +1670,25 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       bottom: 7vh; } }
 
 #x-button-trigger {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   display: table;
   margin: 0 auto; }
 
 #info-button-trigger {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   display: table;
   margin: 0 auto; }
 
-.button-border {
-  width: 28px;
-  height: 28px;
-  margin: 0 auto;
-  border-radius: 50%;
-  border: 2.5px solid #000; }
-
-.sprite-i {
-  width: 28px;
-  height: 28px;
-  background-image: url(/untitled/wp-content/themes/untitled/images/button-i.svg);
-  background-position: center center;
-  background-size: 100%;
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle; }
-
-.sprite-x {
-  width: 29px;
-  height: 29px;
-  background-image: url(/untitled/wp-content/themes/untitled/images/button-x.svg);
-  background-position: -1px 1px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: table-cell;
-  vertical-align: middle; }
+.x-i-button {
+  width: 27px;
+  height: 27px;
+  margin: 0 auto; }
+  .x-i-button #i-icon {
+    opacity: 1; }
+  .x-i-button #x-icon {
+    opacity: 0; }
 
 .information {
   position: relative;
@@ -1750,16 +1732,17 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   justify-content: space-between;
   font-family: "SS-Light", Arial, sans-serif;
   padding: 0 20px;
-  padding-top: 40px; }
+  line-height: 1.85em; }
   @media only screen and (min-width: 980px) {
     .info-flex-container {
-      padding-top: 0; } }
+      padding-top: 0;
+      line-height: 1.85em; } }
   .info-flex-container h2 {
     font-size: 1em;
     line-height: 1em;
     font-family: "SS-SemiBold", Arial, sans-serif;
     padding-bottom: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     border-bottom: 2.5px solid #000;
     color: #000;
     text-transform: uppercase;
@@ -1784,7 +1767,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       margin: 0 0 30px 0; }
     .info-flex-container .info-headings li {
       font-size: .95em;
-      line-height: 1.75em; }
+      line-height: 1em;
+      margin-bottom: .85em; }
   .info-flex-container .info-description {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1828,10 +1812,13 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     line-height: 1em;
     font-family: "SS-SemiBold", Arial, sans-serif;
     padding-bottom: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     border-bottom: 2.5px solid #000;
     color: #000;
     text-transform: uppercase; }
+    @media only screen and (min-width: 980px) {
+      .info-flex-container--lower h2 {
+        width: 75%; } }
   .info-flex-container--lower h2.potential-projects {
     text-transform: none;
     margin-bottom: 12px; }
@@ -1855,7 +1842,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       margin: 0 0 30px 0; }
     .info-flex-container--lower .info-headings li {
       font-size: .95em;
-      line-height: 1.75em; }
+      line-height: 1em;
+      margin-bottom: .85em; }
   .info-flex-container--lower .info-description {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;

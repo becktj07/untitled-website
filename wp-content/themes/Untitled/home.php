@@ -93,8 +93,12 @@
 	</section>
 	<div class="home-button-wrapper">
 		<a href="" id="info-button-trigger">
-			<div class="button-border">
-				<div class="sprite-i"></div>
+			<div class="x-i-button">
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.667 25.96">
+  <circle fill="none" stroke="#000" stroke-width="2.25" stroke-miterlimit="10" cx="12.855" cy="12.884" r="11.416"/>
+  <path id="i-icon" d="M11.327 7.062c0-.81.648-1.368 1.53-1.368.9 0 1.531.558 1.531 1.368s-.631 1.387-1.531 1.387c-.882 0-1.53-.576-1.53-1.387m.216 2.701h2.647v8.931h-2.647V9.763z"/>
+  <path id="x-icon" fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10" d="M17.634 8.141L8.08 17.694m0-9.553l9.554 9.554"/>
+</svg>
 			</div>
 		</a>
 	</div>
