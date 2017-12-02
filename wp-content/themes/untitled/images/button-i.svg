@@ -1,14 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 34 31" enable-background="new 0 0 34 31" xml:space="preserve">
-<g id="Layer_1">
-</g>
-<g id="Layer_2">
-	<g>
-		<path d="M14.828,8.867c0-1.085,0.867-1.833,2.05-1.833c1.207,0,2.052,0.748,2.052,1.833c0,1.086-0.845,1.858-2.052,1.858
-			C15.695,10.725,14.828,9.953,14.828,8.867"/>
-		<rect x="15.116" y="12.486" width="3.547" height="11.965"/>
-	</g>
-</g>
+
+<!-- <svg preserveAspectRatio="xMidYMid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 288">
+  <path d="M93.201 103.282c0-7.734 6.18-13.066 14.613-13.066 8.603 0 14.627 5.332 14.627 13.066 0 7.741-6.024 13.244-14.627 13.244-8.433-.001-14.613-5.503-14.613-13.244m2.053 25.796h25.283v85.287H95.254z"/>
+</svg> -->
+<svg preserveAspectRatio="xMidYMid"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 288">
+  <path d="M92.201 102.148c0-7.063 5.644-11.932 13.345-11.932 7.856 0 13.358 4.869 13.358 11.932 0 7.07-5.502 12.095-13.358 12.095-7.701 0-13.345-5.025-13.345-12.095m1.875 23.558h23.089v77.887H94.076z"/>
 </svg>

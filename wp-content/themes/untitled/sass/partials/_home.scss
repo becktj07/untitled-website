@@ -151,59 +151,45 @@
 }
 
 #x-button-trigger {
-	width: 34px;
+	width: 32px;
 	height: 32px;
-	display: block;
+	display: table;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 #info-button-trigger {
-	width: 34px;
+	width: 32px;
 	height: 32px;
-	display: block;
+	display: table;
     margin: 0 auto;
-    overflow: hidden;
 }
 
 .button-border {
-    width: 26px;
-    height: 26px;
+    width: 28px;
+    height: 28px;
     margin: 0 auto;
     border-radius: 50%;
     border: 2.5px solid #000;
-    overflow: hidden;
 }
 
 .sprite-i {
     width: 28px;
     height: 28px;
     background-image: url(/untitled/wp-content/themes/untitled/images/button-i.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    background-position: center center;
     background-size: 100%;
-
-    @media #{$mq-medium} {
-        background-position: -1px 0px;
-    }
-
-    @media #{$mq-large} {
-        background-position: -1px 0px;
-    }
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .sprite-x {
     width: 29px;
     height: 29px;
     background-image: url(/untitled/wp-content/themes/untitled/images/button-x.svg);
+    background-position: -1px 1px;
     background-repeat: no-repeat;
-    background-position: -2px -1px;
     background-size: contain;
-
-    @media #{$mq-medium} {
-        background-position: -1px -1px;
-    }
-    @media #{$mq-large} {
-        background-position: -2px 0px;
-    }
+    display: table-cell;
+    vertical-align: middle;
 }

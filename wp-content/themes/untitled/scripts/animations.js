@@ -30,21 +30,21 @@ function desktopFunctions(){
             }, 600);
             setTimeout(function(){
                 $('.branding-text-watermark__creative').animate({ opacity: 1 }, 650);
-            }, 1500);
+            }, 1100);
             setTimeout(function(){
                 $('.branding-text-watermark__studio').animate({ opacity: 1 }, 650);
-            }, 1800);
+            }, 1400);
             setTimeout(function(){
                 $('.untitled-text-overlay').css('z-index', -3);
                 $('.information').css('z-index', 2);
-            }, 2000);
+            }, 1600);
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
-            }, 2200);
+            }, 1700);
         }); 
         setTimeout(function(){
             $('.home-button-wrapper > a').attr('id', 'x-button-trigger');
-        }, 3000);
+        }, 2000);
     });
        
     $(document).on("click","#x-button-trigger",function(xButtonClick){
