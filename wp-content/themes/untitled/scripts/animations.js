@@ -20,7 +20,6 @@ function desktopFunctions(){
         });
         $('svg > #i-icon').animate({ opacity: 0}, 500, function(){
             $('svg > #x-icon').animate({ opacity: 1}, 500); 
-            $('.information-container').css('overflow-y', 'visible');
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 0 }, 1000, 'easeOutCubic');
             }, 300);
@@ -41,6 +40,7 @@ function desktopFunctions(){
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
             }, 1700);
+            $('body').css('overflow-y', 'auto');
         }); 
         setTimeout(function(){
             $('.home-button-wrapper > a').attr('id', 'x-button-trigger');
@@ -55,6 +55,7 @@ function desktopFunctions(){
         });
         $('svg > #x-icon').animate({ opacity: 0}, 500, function(){
             $('svg > #i-icon').animate({ opacity: 1}, 500); 
+            $('body').css('overflow-y', 'hidden');
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 0}, 800, 'easeOutCubic');
             }, 200);

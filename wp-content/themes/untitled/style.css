@@ -509,9 +509,6 @@ textarea {
 body {
   font-family: "SS-Regular", Arial, sans-serif;
   overflow-y: hidden; }
-  @media only screen and (min-width: 768px) {
-    body {
-      overflow-y: auto; } }
 
 h1 {
   font-size: 14px; }
@@ -1541,7 +1538,12 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 
 .home-content__outer-wrapper {
   position: relative;
-  height: 100vh; }
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media only screen and (min-width: 980px) {
+    .home-content__outer-wrapper {
+      min-height: 100vh; } }
 
 .home-slider__inner-wrapper {
   position: absolute;
@@ -1553,6 +1555,26 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   margin: 0 auto;
   width: calc(100% - 90px);
   z-index: 1; }
+
+.home-slider {
+  visibility: hidden;
+  z-index: 990;
+  margin: 0 auto;
+  opacity: 0; }
+
+.slick-track {
+  height: 100vh; }
+
+.slick-slide {
+  height: 70vh !important; }
+  @media only screen and (min-width: 768px) {
+    .slick-slide {
+      height: 100vh !important; } }
+  .slick-slide img {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); }
 
 .untitled-text-overlay {
   position: absolute;
@@ -1624,29 +1646,6 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 .branding-text-watermark__creative, .branding-text-watermark__studio {
   opacity: 0; }
 
-.home-slider {
-  visibility: hidden;
-  z-index: 990;
-  margin: 0 auto;
-  opacity: 0; }
-  @media only screen and (min-width: 1170px) {
-    .home-slider {
-      max-width: 50vw; } }
-
-.slick-slide {
-  height: 70vh !important; }
-  @media only screen and (min-width: 768px) {
-    .slick-slide {
-      height: 83vh !important; } }
-  @media only screen and (min-width: 980px) {
-    .slick-slide {
-      height: 70vh !important; } }
-  .slick-slide img {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%); }
-
 .home-button-wrapper {
   z-index: 999;
   opacity: 0;
@@ -1662,7 +1661,6 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       position: absolute;
       bottom: 20px;
       width: 100%;
-      height: 32px;
       margin: 0 auto;
       z-index: 999; } }
   @media only screen and (min-width: 980px) {
@@ -1714,8 +1712,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
 .information-container {
   position: relative;
   margin: auto;
-  height: 100vh;
-  overflow-y: hidden; }
+  height: 100vh; }
   @media only screen and (min-width: 768px) {
     .information-container {
       height: auto; } }
@@ -1821,7 +1818,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
         width: 75%; } }
   .info-flex-container--lower h2.potential-projects {
     text-transform: none;
-    margin-bottom: 12px; }
+    margin-bottom: 12px;
+    width: auto; }
     @media only screen and (min-width: 768px) {
       .info-flex-container--lower h2.potential-projects {
         margin-top: 15px; } }
