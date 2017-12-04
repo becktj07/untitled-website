@@ -1715,7 +1715,7 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   height: 100vh; }
   @media only screen and (min-width: 768px) {
     .information-container {
-      height: auto; } }
+      height: 0; } }
 
 .info-flex-container {
   opacity: 0;

@@ -13,6 +13,7 @@ function desktopFunctions(){
         $('.home-button-wrapper > a').attr("href", "/");
     });
     $(document).on("click","#info-button-trigger",function(iButtonClick){
+        $('.information-container').css('height', 'auto');
         iButtonClick.preventDefault();
         $(this).removeAttr('id', 'info-button-trigger');
         $('.home-button-wrapper > a').on('click',function(event) {
@@ -77,6 +78,9 @@ function desktopFunctions(){
         setTimeout(function(){
             $('.home-button-wrapper > a').attr('id', 'info-button-trigger');
         }, 2000);
+        setTimeout(function(){
+            $('.information-container').css('height', '0');
+        }, 2500);
     });
 }
 
