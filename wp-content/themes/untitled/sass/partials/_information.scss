@@ -24,6 +24,9 @@
     position: relative;
 	margin:auto;
 	height: 100vh;
+		box-sizing: border-box;
+		padding: 40px 0 0 0;
+	
 
 	@media #{$mq-large} {
 		width: 930px;

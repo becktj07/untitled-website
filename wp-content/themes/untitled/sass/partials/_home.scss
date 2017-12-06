@@ -31,7 +31,7 @@
 }
 
 .slick-slide {
-    height: 70vh!important;
+    height: 90vh!important;
 
     @media #{$mq-large} {
         height: 100vh!important;
@@ -69,11 +69,11 @@
     }
 
     @media #{$mq-medium} {
-        top: 300px;
+        top: 320px;
     }
 
     @media #{$mq-large} {
-        top: 330px;
+        top: 350px;
         max-width: 960px;
     }
 

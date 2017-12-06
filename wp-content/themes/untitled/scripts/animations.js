@@ -25,7 +25,7 @@ function desktopFunctions(){
                 $('.home-slider').animate({ opacity: 0 }, 1000, 'easeOutCubic');
             }, 300);
             setTimeout(function(){
-                $('.untitled-text-overlay').animate({ top: '75px'}, 500, 'easeOutCubic');
+                $('.untitled-text-overlay').animate({ top: '115px'}, 500, 'easeOutCubic');
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'});
             }, 600);
             setTimeout(function(){
@@ -87,6 +87,7 @@ function desktopFunctions(){
 function mobileFunctions() {
     $(document).ready(function() {
         $('.home-button-wrapper > a').attr("href", "#top");
+        $('.information-container').css('height', '0');
     });
 
     $(document).on("click","#info-button-trigger",function(iButtonClick){
@@ -97,9 +98,9 @@ function mobileFunctions() {
         });
         $('svg > #i-icon').animate({ opacity: 0}, 500, function(){
             $('svg > #x-icon').animate({ opacity: 1}, 500); 
-            $('.information-container').css('overflow-y', 'visible');
             setTimeout(function(){
-                $('.home-slider').animate({ opacity: 0 }, 1000);
+                $('.home-slider').animate({ opacity: 0 }, 1000)
+                $('.information-container').css('height', '100vh');
             }, 300);
             setTimeout(function(){
                 $('.untitled-text-overlay').animate({ top: '75px'}, 500, 'easeOutCubic');
@@ -112,7 +113,7 @@ function mobileFunctions() {
                 $('.branding-text-watermark__studio').animate({ opacity: 1 }, 650);
                 $('.untitled-text-overlay').css('z-index', -3);
                 $('.information').css('z-index', 2);
-                $('.info-flex-container').css("padding-top", 40);
+                //$('.info-flex-container').css("padding-top", 40);
             }, 1600);
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
@@ -138,7 +139,6 @@ function mobileFunctions() {
                 $('.info-flex-container').animate({ opacity: 0}, 500, 'easeOutCubic');
             }, 200);
             setTimeout(function(){
-                $('.information-container').css('overflow-y', 'hidden');
                 $('.branding-text-watermark__studio').animate({ opacity: 0 }, 650);
             }, 600);
             setTimeout(function(){

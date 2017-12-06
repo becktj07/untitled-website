@@ -68,9 +68,10 @@ textarea {
 body {
     font-family:$body-font;
     overflow-y: hidden;
-    // @media #{$mq-medium} {
-    //     overflow-y: auto;
-    // }
+    
+    @media #{$mq-medium} {
+        overflow-y: auto;
+    }
 }
 
 h1 {
