@@ -25,20 +25,22 @@
 }
 
 .slick-track {
-    height: 100vh;
+    @media #{$mq-large} {
+        height: 100vh;
+    }
 }
 
 .slick-slide {
     height: 70vh!important;
 
-    @media #{$mq-medium} {
+    @media #{$mq-large} {
         height: 100vh!important;
     }
 
     img {
         position: relative;
         top: 50%;
-        transform: translateY(-50%); 
+        transform: translateY(-50%);
     }
 }
 
@@ -47,10 +49,6 @@
     z-index: 990;
     width: calc(100% - 40px);
     opacity: 0;
-
-    @media #{$mq-large} {
-        max-width: 960px;
-    }
 
     svg {
         max-width:100%;

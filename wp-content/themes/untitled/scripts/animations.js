@@ -138,6 +138,7 @@ function mobileFunctions() {
                 $('.info-flex-container').animate({ opacity: 0}, 500, 'easeOutCubic');
             }, 200);
             setTimeout(function(){
+                $('.information-container').css('overflow-y', 'hidden');
                 $('.branding-text-watermark__studio').animate({ opacity: 0 }, 650);
             }, 600);
             setTimeout(function(){
