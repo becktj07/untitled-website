@@ -11,10 +11,15 @@
 
 .home-slider__inner-wrapper {
     @include centerer;
+    top: calc(50% - 10px);
     width: 100%;
     margin: 0 auto;
     width: calc(100% - 90px);
     z-index: 1;
+
+    @media #{$mq-large} {
+        top: 50%;
+    }
 }
 
 .home-slider {
@@ -31,7 +36,7 @@
 }
 
 .slick-slide {
-    height: 90vh!important;
+    height: 80vh!important;
 
     @media #{$mq-large} {
         height: 100vh!important;
@@ -73,7 +78,7 @@
     }
 
     @media #{$mq-large} {
-        top: 350px;
+        top: 345px;
         max-width: 960px;
     }
 
@@ -128,7 +133,7 @@
     opacity: 0;
     @extend .clearfix;
     position: fixed;
-    bottom: 18px;
+    bottom: 30px;
     width: 100%;
     height:28px;
     margin: 0 auto;
