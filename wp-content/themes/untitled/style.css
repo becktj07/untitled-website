@@ -1824,6 +1824,9 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     border-bottom: 2.5px solid #000;
     color: #000;
     text-transform: uppercase; }
+    @media only screen and (min-width: 885px) {
+      .info-flex-container--lower h2 {
+        width: 80%; } }
   .info-flex-container--lower h2.potential-projects {
     text-transform: none;
     margin-bottom: 12px;

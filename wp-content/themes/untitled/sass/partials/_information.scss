@@ -130,6 +130,10 @@
 		border-bottom: 2.5px solid #000;
 		color: #000;
 		text-transform: uppercase;
+
+		@media only screen and (min-width: 885px){
+			width: 80%;
+		}
 	}
 
 	h2.potential-projects {
