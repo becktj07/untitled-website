@@ -11,7 +11,7 @@
 
 .home-slider__inner-wrapper {
     @include centerer;
-    top: calc(50% - 10px);
+    top: calc(50% - 15px);
     width: 100%;
     margin: 0 auto;
     width: calc(100% - 90px);
@@ -51,9 +51,14 @@
 
 .untitled-text-overlay {
     @include centerer;
+    top: calc(50% - 15px);
     z-index: 990;
     width: calc(100% - 40px);
     opacity: 0;
+
+    @media #{$mq-large} {
+        top: 50%;
+    }
 
     svg {
         max-width:100%;
