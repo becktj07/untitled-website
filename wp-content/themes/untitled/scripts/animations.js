@@ -97,9 +97,9 @@ function desktopFunctions(){
         setTimeout(function(){
             $('.home-button-wrapper > a').attr('id', 'info-button-trigger');
         }, 2000);
-        // setTimeout(function(){
-        //     $('.information-container').css('height', '0');
-        // }, 2500);
+        setTimeout(function(){
+            $('.information-container').css('height', '0');
+        }, 2500);
     });
 }
 
