@@ -57,84 +57,58 @@
 
 .untitled-text-overlay {
     @include centerer;
-    //top: calc(50% - 15px);
     z-index: 990;
     width: calc(100% - 40px);
     opacity: 0;
 
-    @media #{$mq-large} {
-        top: 50%;
-    }
-
     svg {
-        max-width:600px;
-        display: block;
-        max-width:100%;
+
     }
 }
 
 .branding-text-watermark__creative {
-    @include centerer;
     z-index: -2;
     width: calc(100% - 40px);
     opacity: 0;
-    top: 190px;
+    position:absolute;
+    left:20px;
+    top: 150px;
     
     @media #{$mq-phone-landscape} {
-        top: 240px;
+        top: 210px;
     }
 
     @media #{$mq-medium} {
-        top: 300px;
-    }
-
-    @media #{$mq-large} {
-        top: 325px;
+        top: 230px;
         max-width: 960px;
-    }
-
-    svg {
-        max-width:630px;
-        display: block;
-        max-width: 100%;
-        // @media #{$mq-medium} {
-        //     max-width:800px;
-        // }
-        // @media #{$mq-large} {
-            //max-width:100%;
-        //}
     }
 }
 
 .branding-text-watermark__studio {
-    @include centerer;
     z-index: -2;
     width: calc(100% - 40px);
     opacity: 0;
-    top: 300px;
+    position:absolute;
+    left:20px;
+    top: 265px;
 
     @media #{$mq-phone-landscape} {
-        top: 400px;
+        top: 380px;
     }
 
     @media #{$mq-medium} {
-        top: 530px;
-    }
-
-    @media #{$mq-large} {
-        top: 560px;
+        top: 470px;
         max-width: 960px;
-    }
-
-    svg {
-        max-width:600px;
-        display: block;
-        max-width:100%;
     }
 }
 
- .branding-text-watermark__creative, .branding-text-watermark__studio {
+.branding-text-watermark__creative, .branding-text-watermark__studio {
     opacity: 0;
+    display: none;
+
+    svg {
+        
+    }
 }
 
 .home-button-wrapper {
@@ -154,10 +128,6 @@
         width: 100%;
         margin: 0 auto;
         z-index: 999;
-    }
-
-    @media #{$mq-large} {
-        //bottom: 7vh;
     }
 }
 
