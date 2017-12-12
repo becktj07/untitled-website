@@ -43,9 +43,8 @@ function initializeHomeSlider() {
 //         $('.slick-slide > img').css('max-height', '100%');
 //     }
 // });
+
 $(window).resize(function() {
-  
         $('.slick-slide > img').css('max-height', 'calc(100% - 120px)');
         $('.slick-slide > img').css('padding-bottom', 20);
-
 });

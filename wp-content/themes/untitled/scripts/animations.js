@@ -4,7 +4,14 @@ $(document).ready(function() {
     $('.info-flex-container').css('display', 'none');
     $('.info-flex-container--lower').css('display', 'none');
     $('body').css('overflow-y', 'hidden');
-    $('.home-button-wrapper > a').addClass('information-closed')
+    $('.home-button-wrapper > a').addClass('information-closed');
+
+    if ($('.home-button-wrapper > a').hasClass('information-closed')){
+        $('html, body').on('touchstart touchmove', function(e){ 
+            //prevent native touch activity like scrolling
+            e.preventDefault(); 
+        });
+    }
 
     if (Modernizr.mq('only screen and (min-width: 768px)') || $(window).width() > 767) {
         desktopFunctions();
@@ -59,7 +66,6 @@ function desktopFunctions(){
                 $('.info-flex-container--lower').css('display', 'flex');
             }, 300);
             setTimeout(function(){
-                //$('.home-content__outer-wrapper').css('padding','40px 0 0 0');
                 $('.untitled-text-overlay').animate({ top: '75px'}, 500, 'easeOutCubic');
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'});
             }, 600);
@@ -74,6 +80,7 @@ function desktopFunctions(){
             setTimeout(function(){
                 $('.untitled-text-overlay').css('z-index', -3);
                 $('.information').css('z-index', 2);
+                //$('.info-flex-container').css('padding-top','40px');
             }, 1600);
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
@@ -101,6 +108,7 @@ function desktopFunctions(){
                 $('.info-flex-container').animate({ opacity: 0}, 800, 'easeOutCubic');
             }, 200);
             setTimeout(function(){
+                //$('.info-flex-container').css('padding-top','0px');
                 $('.branding-text-watermark__studio').animate({ opacity: 0 }, 650);
             }, 500);
             setTimeout(function(){
@@ -166,6 +174,7 @@ function mobileFunctions() {
                 $('.branding-text-watermark__studio').animate({ opacity: 1 }, 650);
                 $('.untitled-text-overlay').css('z-index', -3);
                 $('.information').css('z-index', 2);
+                $('.info-flex-container').css('padding-top','40px');
             }, 1600);
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
@@ -194,6 +203,7 @@ function mobileFunctions() {
                 $('.info-flex-container--lower').animate({ opacity: 0}, 500, 'easeOutCubic');
             }, 200);
             setTimeout(function(){
+                $('.info-flex-container').css('padding-top','0');
                 $('.branding-text-watermark__studio').animate({ opacity: 0 }, 650);
             }, 600);
             setTimeout(function(){
