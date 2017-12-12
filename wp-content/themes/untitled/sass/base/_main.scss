@@ -373,3 +373,17 @@ picture {
         page-break-after: avoid;
     }
 }
+
+/* Safari 9.0 (iOS Only) Hacks */
+_::-webkit-full-page-media, _:future, :root body {
+        @media #{$mq-medium} {
+            position: relative;
+            bottom: 30px;
+        }
+    }
+
+    _::-webkit-full-page-media, _:future, :root .home-button-wrapper {
+        @media #{$mq-medium} {
+            bottom: 50px;
+        }
+    }
