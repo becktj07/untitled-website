@@ -68,8 +68,12 @@
 		order: 2;
 	
 		@media #{$mq-medium} {
-			flex-basis: 25%;
+			flex-basis: 29%;
 			order: 1;
+		}
+
+		@media #{$mq-large} {
+			flex-basis: 25%;
 		}
 	
 		ul {
@@ -91,7 +95,7 @@
 	
 		@media #{$mq-medium} {
 			padding-top: 0;
-			flex-basis: 70%;
+			flex-basis: 65%;
 			order: 2;
 		}
 
@@ -121,7 +125,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	font-family: $light-font;
-	padding-top: 0;
+	padding-top: 0!important;
 	
 	h2.content-development-management {
 		font-size: 1em;
@@ -167,6 +171,10 @@
 		order: 1;
 	
 		@media #{$mq-medium} {
+			flex-basis: 29%;
+		}
+
+		@media #{$mq-large} {
 			flex-basis: 25%;
 		}
 	
@@ -191,7 +199,7 @@
 		padding-top: 0;
 	
 		@media #{$mq-medium} {
-			flex-basis: 70%;
+			flex-basis: 65%;
 			text-align: left;
 		}
 
