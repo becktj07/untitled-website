@@ -4,6 +4,7 @@ $(document).ready(function() {
     $('.info-flex-container').css('display', 'none');
     $('.info-flex-container--lower').css('display', 'none');
     $('body').css('overflow-y', 'hidden');
+    $('.home-button-wrapper > a').addClass('information-closed')
 
     if (Modernizr.mq('only screen and (min-width: 768px)') || $(window).width() > 767) {
         desktopFunctions();
@@ -32,12 +33,13 @@ $(window).resize(function() {
             });
         }
     }
-
-    if (Modernizr.mq('only screen and (min-width: 768px)') || $(window).width() > 767) {
-        $('.information-container').css('height', 'auto');
-    }
-    else {
-        $('.information-container').css('height', '100vh');
+    if ($('.home-button-wrapper > a').hasClass('information-closed')){
+        if (Modernizr.mq('only screen and (min-width: 768px)') || $(window).width() > 767) {
+            $('.information-container').css('height', 'auto');
+        }
+        else {
+            $('.information-container').css('height', '100vh');
+        }
     }
 });
 
@@ -45,7 +47,7 @@ function desktopFunctions(){
     $(document).on("click","#info-button-trigger",function(iButtonClick){
         iButtonClick.preventDefault();
         $(this).removeAttr('id', 'info-button-trigger');
-        $('.home-button-wrapper > a').addClass('information-open');
+        $('.home-button-wrapper > a').removeClass('information-closed').addClass('information-open');
         $('.home-button-wrapper > a').on('click',function(event) {
             event.preventDefault();
         });
@@ -57,6 +59,7 @@ function desktopFunctions(){
                 $('.info-flex-container--lower').css('display', 'flex');
             }, 300);
             setTimeout(function(){
+                //$('.home-content__outer-wrapper').css('padding','40px 0 0 0');
                 $('.untitled-text-overlay').animate({ top: '75px'}, 500, 'easeOutCubic');
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'});
             }, 600);
@@ -75,7 +78,6 @@ function desktopFunctions(){
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
                 $('body').css('overflow-y', 'auto');
-                $('.information-container').css('height','auto');
             }, 1700);
         }); 
         setTimeout(function(){
@@ -87,7 +89,7 @@ function desktopFunctions(){
     $(document).on("click","#x-button-trigger",function(xButtonClick){
         xButtonClick.preventDefault();
         $("html, body").animate({ scrollTop: 0 }, "350");
-        $('.home-button-wrapper > a').removeClass('information-open');
+        $('.home-button-wrapper > a').removeClass('information-open').addClass('information-closed');
         $(this).removeAttr('id', 'x-button-trigger');
         $('.home-button-wrapper > a').on('click',function(event) {
             event.preventDefault();
@@ -133,7 +135,7 @@ function desktopFunctions(){
 function mobileFunctions() {
     $(document).on("click","#info-button-trigger",function(iButtonClick){
         iButtonClick.preventDefault();
-        $('.home-button-wrapper > a').addClass('information-open');        
+        $('.home-button-wrapper > a').removeClass('information-closed').addClass('information-open');    
         $(this).removeAttr('id', 'info-button-trigger');
         $('.home-button-wrapper > a').on('click',function(event) {
             event.preventDefault();
@@ -180,7 +182,7 @@ function mobileFunctions() {
        
     $(document).on("click","#x-button-trigger",function(xButtonClick){
         $("html, body").animate({ scrollTop: 0 }, "350");
-        $('.home-button-wrapper > a').removeClass('information-open');        
+        $('.home-button-wrapper > a').removeClass('information-open').addClass('information-closed');   
         $(this).removeAttr('id', 'x-button-trigger');
         $('.home-button-wrapper > a').on('click',function(event) {
             event.preventDefault();
@@ -217,8 +219,6 @@ function mobileFunctions() {
             $('.home-button-wrapper > a').attr('id', 'info-button-trigger');
         }, 2200);
         setTimeout(function(){
-            $('.info-flex-container').css('display', 'none');
-            $('.info-flex-container--lower').css('display', 'none');
             $('.branding-text-watermark__creative').css('display', 'none');
             $('.branding-text-watermark__studio').css('display', 'none');
         }, 2200);

@@ -36,11 +36,9 @@
 }
 
 .slick-slide {
-    height: 80vh!important;
 
-    @media #{$mq-large}{
         height: 100vh!important;
-    }
+    
 
     img {
         position: relative;

@@ -34,12 +34,18 @@ function initializeHomeSlider() {
     }
 }
 
+// $(window).resize(function() {
+//     if (Modernizr.mq('only screen and (min-width: 768px)') || $(window).width() > 767) {
+//         $('.slick-slide > img').css('max-height', 'calc(100% - 120px)');
+//         $('.slick-slide > img').css('padding-bottom', 20);
+//     }
+//     else {
+//         $('.slick-slide > img').css('max-height', '100%');
+//     }
+// });
 $(window).resize(function() {
-    if (Modernizr.mq('only screen and (min-width: 768px)') || $(window).width() > 767) {
+  
         $('.slick-slide > img').css('max-height', 'calc(100% - 120px)');
         $('.slick-slide > img').css('padding-bottom', 20);
-    }
-    else {
-        $('.slick-slide > img').css('max-height', '100%');
-    }
+
 });
