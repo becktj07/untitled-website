@@ -6,13 +6,6 @@ $(document).ready(function() {
     $('body').css('overflow-y', 'hidden');
     $('.home-button-wrapper > a').addClass('information-closed');
 
-    //prevent native touch activity like scrolling
-    if ($('.home-button-wrapper > a').hasClass('information-closed')){
-        $('html').on('touchmove', function(lock){
-            lock.preventDefault();
-        });
-    }
-
     if (Modernizr.mq('only screen and (min-width: 768px)') || $(window).width() > 767) {
         desktopFunctions();
     }
@@ -42,6 +35,7 @@ $(window).resize(function() {
             });
         }
     }
+
     if ($('.home-button-wrapper > a').hasClass('information-closed')){
         if (Modernizr.mq('only screen and (min-width: 768px)') || $(window).width() > 767) {
             $('.information-container').css('height', 'auto');
@@ -53,13 +47,8 @@ $(window).resize(function() {
 });
 
 function desktopFunctions(){
+    $('body').css('position','fixed');
     $(document).on("click","#info-button-trigger",function(iButtonClick){
-
-        $('html').on('touchmove', function(lock){
-            return true;
-            $('body').css('overflow-y', 'scroll');
-        });
-
         iButtonClick.preventDefault();
         $(this).removeAttr('id', 'info-button-trigger');
         $('.home-button-wrapper > a').removeClass('information-closed').addClass('information-open');
@@ -93,6 +82,7 @@ function desktopFunctions(){
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
                 $('body').css('overflow-y', 'auto');
+                $('body').css('position','relative');
             }, 1700);
         }); 
         setTimeout(function(){
@@ -112,6 +102,7 @@ function desktopFunctions(){
         $('svg > #x-icon').animate({ opacity: 0}, 500, function(){
             $('svg > #i-icon').animate({ opacity: 1}, 500); 
             $('body').css('overflow-y', 'hidden');
+            $('body').css('position','fixed');
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 0}, 800, 'easeOutCubic');
             }, 200);
@@ -125,7 +116,7 @@ function desktopFunctions(){
             setTimeout(function(){
                 $('.untitled-text-overlay').animate({ top: '50%'}, 500, 'easeOutCubic').css('z-index', 999);
                 $('.untitled-text-overlay').css({
-                    'left' : '50%',
+                    'left' : 'calc(50% - 8px)',
                     'transform' : 'translate(-50%, -50%)'
                 });
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#000', transition: '.5s'});
@@ -149,6 +140,8 @@ function desktopFunctions(){
 }
 
 function mobileFunctions() {
+    $('body').css('position', 'fixed');
+    $('.information').css('height', '0');
     $(document).on("click","#info-button-trigger",function(iButtonClick){
         iButtonClick.preventDefault();
         $('.home-button-wrapper > a').removeClass('information-closed').addClass('information-open');    
@@ -189,6 +182,7 @@ function mobileFunctions() {
             }, 2000);
         }); 
         setTimeout(function(){
+            $('body').css('position', 'relative');
             $('body').css('overflow-y', 'auto');
         }, 2300);
         setTimeout(function(){
@@ -198,6 +192,7 @@ function mobileFunctions() {
     });
        
     $(document).on("click","#x-button-trigger",function(xButtonClick){
+        $('body').css('position', 'fixed');
         $("html, body").animate({ scrollTop: 0 }, "350");
         $('.home-button-wrapper > a').removeClass('information-open').addClass('information-closed');   
         $(this).removeAttr('id', 'x-button-trigger');

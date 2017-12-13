@@ -80,7 +80,7 @@
 						<div class="info-description">
 							<h2 class="potential-projects">To discuss potential projects, please contact us at:</h2>
 							<ul>
-								<li>info @untitledcreaetivestudio.com</li>
+								<li><a href="mailto:highfive@untitledcreativestudio.com">highfive@untitledcreativestudio.com</a></li>
 								<li>414-XXX-XXXX</li>
 								<li>1835 N 54th <br>
 								Milwaukee, WI 53208
