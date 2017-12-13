@@ -20,7 +20,7 @@ $(window).resize(function() {
             $('.information-container').css('height', 'auto');
             $('.info-flex-container').css('padding-top','0px');
             $('.untitled-text-overlay').css({
-                'top' : '75px',
+                'top' : '115px',
                 'left' : '50%',
                 'transform' : 'translate(-50%, -50%)'
             });
@@ -63,7 +63,7 @@ function desktopFunctions(){
                 $('.info-flex-container--lower').css('display', 'flex');
             }, 300);
             setTimeout(function(){
-                $('.untitled-text-overlay').animate({ top: '75px'}, 500, 'easeOutCubic');
+                $('.untitled-text-overlay').animate({ top: '115px'}, 500, 'easeOutCubic');
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'});
             }, 600);
             setTimeout(function(){
@@ -77,7 +77,6 @@ function desktopFunctions(){
             setTimeout(function(){
                 $('.untitled-text-overlay').css('z-index', -3);
                 $('.information').css('z-index', 2);
-                //$('.info-flex-container').css('padding-top','40px');
             }, 1600);
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
@@ -107,7 +106,6 @@ function desktopFunctions(){
                 $('.info-flex-container').animate({ opacity: 0}, 800, 'easeOutCubic');
             }, 200);
             setTimeout(function(){
-                //$('.info-flex-container').css('padding-top','0px');
                 $('.branding-text-watermark__studio').animate({ opacity: 0 }, 650);
             }, 500);
             setTimeout(function(){
