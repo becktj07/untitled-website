@@ -1,6 +1,5 @@
 
 $(document).ready(function() {
-    var infoShown = false;
     $('.info-flex-container').css('display', 'none');
     $('.info-flex-container--lower').css('display', 'none');
     $('body').css('overflow-y', 'hidden');
@@ -20,8 +19,8 @@ $(window).resize(function() {
             $('.information-container').css('height', 'auto');
             $('.info-flex-container').css('padding-top','0px');
             $('.untitled-text-overlay').css({
-                'top' : '115px',
-                'left' : '50%',
+                'top' : '145px',
+                'left' : 'calc(50% - 8px)',
                 'transform' : 'translate(-50%, -50%)'
             });
         }
@@ -63,7 +62,7 @@ function desktopFunctions(){
                 $('.info-flex-container--lower').css('display', 'flex');
             }, 300);
             setTimeout(function(){
-                $('.untitled-text-overlay').animate({ top: '115px'}, 500, 'easeOutCubic');
+                $('.untitled-text-overlay').animate({ top: '145px'}, 500, 'easeOutCubic');
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'});
             }, 600);
             setTimeout(function(){
@@ -87,7 +86,6 @@ function desktopFunctions(){
         setTimeout(function(){
             $('.home-button-wrapper > a').attr('id', 'x-button-trigger');
         }, 2000);
-        var infoShown = true; 
     });
        
     $(document).on("click","#x-button-trigger",function(xButtonClick){
@@ -133,7 +131,6 @@ function desktopFunctions(){
             $('.branding-text-watermark__creative').css('display', 'none');
             $('.branding-text-watermark__studio').css('display', 'none');
         }, 2200);
-        var infoShown = false; 
     });
 }
 
@@ -186,7 +183,6 @@ function mobileFunctions() {
         setTimeout(function(){
             $('.home-button-wrapper > a').attr('id', 'x-button-trigger');
         }, 2500);
-        var infoShown = true;
     });
        
     $(document).on("click","#x-button-trigger",function(xButtonClick){
@@ -233,6 +229,5 @@ function mobileFunctions() {
             $('.branding-text-watermark__creative').css('display', 'none');
             $('.branding-text-watermark__studio').css('display', 'none');
         }, 2200);
-        var infoShown = false; 
     });
 }

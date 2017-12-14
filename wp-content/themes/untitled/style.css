@@ -824,24 +824,16 @@ _:default:not(:root:root):after, h2.content-development-management:after {
   color: blue; }
 
 @font-face {
-  font-family: 'SS-Black';
-  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Black.ttf"); }
-
-@font-face {
   font-family: 'SS-SemiBold';
-  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-SemiBold.ttf"); }
-
-@font-face {
-  font-family: 'SS-Bold';
-  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Bold.ttf"); }
+  src: url("/wp-content/themes/untitled/fonts/SourceSansPro-SemiBold.ttf"); }
 
 @font-face {
   font-family: 'SS-Regular';
-  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Regular.ttf"); }
+  src: url("/wp-content/themes/untitled/fonts/SourceSansPro-Regular.ttf"); }
 
 @font-face {
   font-family: 'SS-Light';
-  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Light.ttf"); }
+  src: url("/wp-content/themes/untitled/fonts/SourceSansPro-Light.ttf"); }
 
 .header {
   max-width: none;
@@ -1619,11 +1611,11 @@ body {
       top: 210px; } }
   @media only screen and (min-width: 768px) {
     .branding-text-watermark__creative {
-      top: 230px;
+      top: 260px;
       max-width: 960px; } }
   @media only screen and (min-width: 980px) {
     .branding-text-watermark__creative {
-      top: 270px; } }
+      top: 300px; } }
 
 .branding-text-watermark__studio {
   z-index: -2;
@@ -1637,11 +1629,11 @@ body {
       top: 380px; } }
   @media only screen and (min-width: 768px) {
     .branding-text-watermark__studio {
-      top: 440px;
+      top: 470px;
       max-width: 960px; } }
   @media only screen and (min-width: 980px) {
     .branding-text-watermark__studio {
-      top: 510px; } }
+      top: 540px; } }
 
 .branding-text-watermark__creative, .branding-text-watermark__studio {
   opacity: 0;
@@ -1716,7 +1708,7 @@ body {
   padding: 0; }
   @media only screen and (min-width: 768px) {
     .information-container {
-      padding: 40px 0 0 0;
+      padding: 70px 0 0 0;
       height: auto;
       max-width: 930px;
       max-height: 100vh;
