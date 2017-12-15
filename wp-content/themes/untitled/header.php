@@ -13,7 +13,6 @@
 <html style="margin:0!important;" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -24,12 +23,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			
-		</div>
 
 		<!--<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'untitled' ); ?></button>
@@ -43,4 +38,3 @@
 
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
