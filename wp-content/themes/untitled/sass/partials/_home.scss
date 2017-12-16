@@ -60,7 +60,7 @@
     width: calc(100% - 40px);
     opacity: 0;
     position:absolute;
-    left:20px;
+    left: 20px;
     top: 128px;
     
     @media #{$mq-phone-landscape} {
@@ -68,12 +68,13 @@
     }
 
     @media #{$mq-medium} {
+        left: 16px;
         top: 300px;
         max-width: 960px;
     }
 
     @media #{$mq-large} {
-        top: 300px;
+        top: 295px;
     }
 }
 
@@ -90,6 +91,7 @@
     }
 
     @media #{$mq-medium} {
+        left: 16px;
         top: 540px;
         max-width: 960px;
     }
@@ -119,13 +121,13 @@
     margin: 0 auto;
     z-index: 999;
 
-    @media #{$mq-medium} {
-        display: block;
-        position: absolute;
-        width: 100%;
-        margin: 0 auto;
-        z-index: 999;
-    }
+    // @media #{$mq-medium} {
+    //     display: block;
+    //     position: absolute;
+    //     width: 100%;
+    //     margin: 0 auto;
+    //     z-index: 999;
+    // }
 }
 
 #x-button-trigger {

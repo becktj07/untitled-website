@@ -198,7 +198,6 @@ function mobileFunctions() {
                 $('.info-flex-container--lower').animate({ opacity: 0}, 500, 'easeOutCubic');
             }, 200);
             setTimeout(function(){
-                $('body').css('position', 'fixed');
                 $('.info-flex-container').css('padding-top','0');
                 $('.branding-text-watermark__studio').animate({ opacity: 0 }, 650);
             }, 600);
@@ -216,6 +215,7 @@ function mobileFunctions() {
             }, 1500);
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 1 }, 500);
+                $('body').css('position', 'fixed');
                 $('body').css('overflow-y', 'hidden');
                 $('.info-flex-container').css('display', 'none');
                 $('.info-flex-container--lower').css('display', 'none');
