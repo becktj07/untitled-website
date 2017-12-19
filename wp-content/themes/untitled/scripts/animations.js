@@ -135,7 +135,6 @@ function desktopFunctions(){
 
 function mobileFunctions() {
     $('body').css('position', 'fixed');
-    $('.information').css('height', '0');
     $(document).on("click","#info-button-trigger",function(iButtonClick){
         iButtonClick.preventDefault();
         $('.home-button-wrapper > a').removeClass('information-closed').addClass('information-open');    
@@ -159,7 +158,7 @@ function mobileFunctions() {
                     'left' : '20px',
                     'transform' : 'none'
                 });
-            }, 650);
+            }, 600);
             setTimeout(function(){
                 $('.branding-text-watermark__creative').css('display', 'block');
                 $('.branding-text-watermark__creative').animate({ opacity: 1 }, 650);

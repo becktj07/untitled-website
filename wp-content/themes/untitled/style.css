@@ -1675,10 +1675,10 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     opacity: 0; }
 
 .information {
-  z-index: 1;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  z-index: 1;
   width: 100%;
   margin: 0 auto;
   display: table; }
@@ -1708,14 +1708,12 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
   @media only screen and (min-width: 768px) {
     .information-container {
       padding: 70px 0;
-      height: auto;
       max-width: 930px;
       max-height: 100vh;
       overflow-y: visible; } }
   @media only screen and (min-width: 980px) {
     .information-container {
-      position: relative;
-      height: 100vh; } }
+      position: relative; } }
 
 .info-flex-container {
   opacity: 0;

@@ -1,11 +1,9 @@
 ﻿
 .information {
-	//position: relative; 
-	z-index: 1;
 	@include box-sizing;
     @extend .clearfix;
+	z-index: 1;
 	width: 100%;
-	//height: 100vh;
 	margin: 0 auto;
 	display: table;
 
@@ -20,8 +18,6 @@
     @extend .clearfix;
 	vertical-align: middle;
 	display: table-cell;
-	//height: 100vh;
-	//max-height: 100vh;
 	width: 100%;
 
 	@media #{$mq-large} {
@@ -31,8 +27,6 @@
 }
 
 .information-container {
-    //position: relative;
-	//height: 100vh;
 	margin: auto;
 	width: 100%;
 	box-sizing: border-box;
@@ -40,7 +34,6 @@
 
 	@media #{$mq-medium} {
 		padding: 70px 0;
-		height: auto;
 		max-width: 930px;
 		max-height: 100vh;
 		overflow-y: visible;
@@ -48,7 +41,6 @@
 
 	@media #{$mq-large} {
 		position: relative;
-		height: 100vh;
 	}
 }
 
