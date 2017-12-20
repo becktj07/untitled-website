@@ -1613,7 +1613,6 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       top: 210px; } }
   @media only screen and (min-width: 768px) {
     .branding-text-watermark__creative {
-      left: 16px;
       top: 300px;
       max-width: 960px; } }
   @media only screen and (min-width: 980px) {
@@ -1632,7 +1631,6 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       top: 380px; } }
   @media only screen and (min-width: 768px) {
     .branding-text-watermark__studio {
-      left: 16px;
       top: 540px;
       max-width: 960px; } }
   @media only screen and (min-width: 980px) {

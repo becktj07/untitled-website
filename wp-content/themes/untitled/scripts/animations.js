@@ -20,7 +20,7 @@ $(window).resize(function() {
             $('.info-flex-container').css('padding-top','0px');
             $('.untitled-text-overlay').css({
                 'top' : '145px',
-                'left' : 'calc(50% - 8px)',
+                'left' : '50%',
                 'transform' : 'translate(-50%, -50%)'
             });
         }
@@ -28,7 +28,7 @@ $(window).resize(function() {
             $('.info-flex-container').css('padding-top','40px');
             $('.information-container').css('height', '100vh');
             $('.untitled-text-overlay').css({
-                'top' : '35px',
+                'top' : '32px',
                 'left' : '20px',
                 'transform' : 'none'
             });
@@ -63,6 +63,7 @@ function desktopFunctions(){
             }, 300);
             setTimeout(function(){
                 $('.untitled-text-overlay').animate({ top: '145px'}, 500, 'easeOutCubic');
+                //$('.untitled-text-overlay').css('left', 'calc(50% - 8px)');
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'});
             }, 600);
             setTimeout(function(){
@@ -111,7 +112,7 @@ function desktopFunctions(){
             setTimeout(function(){
                 $('.untitled-text-overlay').animate({ top: '50%'}, 500, 'easeOutCubic').css('z-index', 999);
                 $('.untitled-text-overlay').css({
-                    'left' : 'calc(50% - 8px)',
+                    //'left' : 'calc(50% - 8px)',
                     'transform' : 'translate(-50%, -50%)'
                 });
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#000', transition: '.5s'});
@@ -150,14 +151,8 @@ function mobileFunctions() {
                 $('.info-flex-container--lower').css('display', 'flex');
             }, 300);
             setTimeout(function(){
-                $('.untitled-text-overlay').animate({ top: '30px'}, 500, 'easeOutCubic');
+                $('.untitled-text-overlay').animate({ top: '72px'}, 500, 'easeOutCubic');
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'});
-            }, 600);
-            setTimeout(function(){
-                $('.untitled-text-overlay').css({
-                    'left' : '20px',
-                    'transform' : 'none'
-                });
             }, 600);
             setTimeout(function(){
                 $('.branding-text-watermark__creative').css('display', 'block');
