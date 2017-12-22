@@ -46,9 +46,12 @@
     width: calc(100% - 40px);
     opacity: 0;
 
-    @media #{$mq-large} {
-        left: calc(50% - 8px);
+    svg {
+        max-width: 100%;
     }
+    // @media #{$mq-large} {
+    //     left: calc(50% - 8px);
+    // }
 }
 
 .branding-text-watermark__creative {
@@ -64,7 +67,7 @@
     }
 
     @media #{$mq-medium} {
-        top: 300px;
+        top: 278px;
         max-width: 960px;
     }
 
@@ -86,7 +89,7 @@
     }
 
     @media #{$mq-medium} {
-        top: 540px;
+        top: 507px;
         max-width: 960px;
     }
 

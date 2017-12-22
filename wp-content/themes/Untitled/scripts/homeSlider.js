@@ -25,19 +25,5 @@ function initializeHomeSlider() {
         slidesToShow: 1,
         slidesToScroll: 1
     });
-    if (Modernizr.mq('only screen and (min-width: 1024px)') || $(window).width() > 1023) {
-        $('.slick-slide > img').css('max-height', '90%');
-    }
-    else {
-        $('.slick-slide > img').css('max-height', '90%');
-    }
+        $('.slick-slide > img').css('max-height', 'calc(100% - 160px)');
 }
-
-$(window).resize(function() {
-    if (Modernizr.mq('only screen and (min-width: 1024px)') || $(window).width() > 1023) {
-        $('.slick-slide > img').css('max-height', '90%');
-    }
-    else {
-        $('.slick-slide > img').css('max-height', '90%');
-    }
-});

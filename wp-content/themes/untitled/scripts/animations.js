@@ -38,6 +38,7 @@ $(window).resize(function() {
     if ($('.home-button-wrapper > a').hasClass('information-closed')){
         if (Modernizr.mq('only screen and (min-width: 768px)') || $(window).width() > 767) {
             $('.information-container').css('height', 'auto');
+            //$('.untitled-text-overlay').css('max-width', '300px');
         }
         else {
             $('.information-container').css('height', '100vh');
@@ -63,7 +64,6 @@ function desktopFunctions(){
             }, 300);
             setTimeout(function(){
                 $('.untitled-text-overlay').animate({ top: '145px'}, 500, 'easeOutCubic');
-                //$('.untitled-text-overlay').css('left', 'calc(50% - 8px)');
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'});
             }, 600);
             setTimeout(function(){
@@ -99,7 +99,6 @@ function desktopFunctions(){
         });
         $('svg > #x-icon').animate({ opacity: 0}, 500, function(){
             $('svg > #i-icon').animate({ opacity: 1}, 500); 
-            $('body').css('overflow-y', 'hidden');
             setTimeout(function(){
                 $('.info-flex-container').animate({ opacity: 0}, 800, 'easeOutCubic');
             }, 200);
@@ -112,7 +111,6 @@ function desktopFunctions(){
             setTimeout(function(){
                 $('.untitled-text-overlay').animate({ top: '50%'}, 500, 'easeOutCubic').css('z-index', 999);
                 $('.untitled-text-overlay').css({
-                    //'left' : 'calc(50% - 8px)',
                     'transform' : 'translate(-50%, -50%)'
                 });
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#000', transition: '.5s'});
@@ -126,6 +124,8 @@ function desktopFunctions(){
             $('.home-button-wrapper > a').attr('id', 'info-button-trigger');
         }, 2000);
         setTimeout(function(){
+            $('body').css('position', 'fixed');
+            $('body').css('overflow-y', 'hidden');
             $('.info-flex-container').css('display', 'none');
             $('.info-flex-container--lower').css('display', 'none');
             $('.branding-text-watermark__creative').css('display', 'none');
@@ -151,7 +151,9 @@ function mobileFunctions() {
                 $('.info-flex-container--lower').css('display', 'flex');
             }, 300);
             setTimeout(function(){
-                $('.untitled-text-overlay').animate({ top: '72px'}, 500, 'easeOutCubic');
+                $('.untitled-text-overlay').animate({ top: '32px'}, 500, 'easeOutCubic');
+                $('.untitled-text-overlay').css('left', '20px');
+                $('.untitled-text-overlay').css('transform', 'none');
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'});
             }, 600);
             setTimeout(function(){
