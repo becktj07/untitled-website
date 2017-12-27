@@ -48,10 +48,8 @@
 
     svg {
         max-width: 100%;
+        display: block;  
     }
-    // @media #{$mq-large} {
-    //     left: calc(50% - 8px);
-    // }
 }
 
 .branding-text-watermark__creative {
@@ -67,7 +65,7 @@
     }
 
     @media #{$mq-medium} {
-        top: 278px;
+        top: 275px;
         max-width: 960px;
     }
 
@@ -89,7 +87,7 @@
     }
 
     @media #{$mq-medium} {
-        top: 507px;
+        top: 487px;
         max-width: 960px;
     }
 
@@ -101,10 +99,6 @@
 .branding-text-watermark__creative, .branding-text-watermark__studio {
     opacity: 0;
     display: none;
-
-    svg {
-        
-    }
 }
 
 .home-button-wrapper {
@@ -117,14 +111,6 @@
     height:28px;
     margin: 0 auto;
     z-index: 999;
-
-    // @media #{$mq-medium} {
-    //     display: block;
-    //     position: absolute;
-    //     width: 100%;
-    //     margin: 0 auto;
-    //     z-index: 999;
-    // }
 }
 
 #x-button-trigger {
@@ -145,6 +131,7 @@
     width: 27px;
     height: 27px;
     margin: 0 auto;
+    cursor: pointer;
 
     #i-icon {
         opacity: 1;

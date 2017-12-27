@@ -28,7 +28,7 @@ $(window).resize(function() {
             $('.info-flex-container').css('padding-top','40px');
             $('.information-container').css('height', '100vh');
             $('.untitled-text-overlay').css({
-                'top' : '32px',
+                'top' : '35px',
                 'left' : '20px',
                 'transform' : 'none'
             });
@@ -38,7 +38,6 @@ $(window).resize(function() {
     if ($('.home-button-wrapper > a').hasClass('information-closed')){
         if (Modernizr.mq('only screen and (min-width: 768px)') || $(window).width() > 767) {
             $('.information-container').css('height', 'auto');
-            //$('.untitled-text-overlay').css('max-width', '300px');
         }
         else {
             $('.information-container').css('height', '100vh');
@@ -151,9 +150,9 @@ function mobileFunctions() {
                 $('.info-flex-container--lower').css('display', 'flex');
             }, 300);
             setTimeout(function(){
-                $('.untitled-text-overlay').animate({ top: '32px'}, 500, 'easeOutCubic');
-                $('.untitled-text-overlay').css('left', '20px');
-                $('.untitled-text-overlay').css('transform', 'none');
+                $('.untitled-text-overlay').animate({ top: '35px'}, 500, 'easeOutCubic');
+                //$('.untitled-text-overlay').css('left', '20px');
+                //$('.untitled-text-overlay').css('transform', 'none');
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'});
             }, 600);
             setTimeout(function(){

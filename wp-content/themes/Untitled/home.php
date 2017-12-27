@@ -10,7 +10,7 @@
 		if( have_rows('home_slider_repeater') ):
 			while( have_rows('home_slider_repeater') ) : the_row(); 
 				?>
-				<div class="home-slider__slide"><img src="<?php the_sub_field('home_slider_image'); ?>" alt="" class="image-contain" /></div>
+				<div class="home-slider__slide"><img data-lazy="<?php the_sub_field('home_slider_image'); ?>" alt="" class="image-contain" /></div>
 				<?php
 			endwhile;
 		endif;
@@ -80,7 +80,7 @@
 						<div class="info-description">
 							<h2 class="potential-projects">To discuss potential projects, please contact us at:</h2>
 							<ul>
-								<li><a href="mailto://highfive@untitledcreativestudio.com">highfive@untitledcreativestudio.com</a></li>
+								<li><a href="mailto:highfive@untitledcreativestudio.com">highfive@untitledcreativestudio.com</a></li>
 								<li>414-792-9670</li>
 								<li>1835 N 54th <br>
 								Milwaukee, WI 53208
