@@ -17,11 +17,11 @@ function initializeHomeSlider() {
         lazyLoad: 'ondemand',
         autoplay: true,
         arrows: false,
-        autoplaySpeed: 1500,
+        autoplaySpeed: 750,
         infinite: true,
         useTransform: false,
         fade: true,
-        speed: 150,
+        speed: 100,
         cssEase: 'linear',
         slidesToShow: 1,
         slidesToScroll: 1

@@ -78,6 +78,7 @@ function desktopFunctions(){
                 $('.information').css('z-index', 2);
             }, 1600);
             setTimeout(function(){
+                $('.home-slider').css('display','none');
                 $('.info-flex-container').animate({ opacity: 1}, 500, 'easeInCubic');
                 $('body').css('overflow-y', 'auto');
                 $('body').css('position','relative');
@@ -110,10 +111,12 @@ function desktopFunctions(){
             setTimeout(function(){
                 $('.untitled-text-overlay').animate({ top: '50%'}, 500, 'easeOutCubic').css('z-index', 999);
                 $('.untitled-text-overlay').css({
-                    'transform' : 'translate(-50%, -50%)'
+                    'transform' : 'translate(-50%, -50%)',
+                    'left' : '50%'
                 });
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#000', transition: '.5s'});
                 $('.untitled-text-overlay').css('z-index', 999);
+                $('.home-slider').css('display','block');
             }, 1300);
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 1 }, 500);
@@ -150,9 +153,7 @@ function mobileFunctions() {
                 $('.info-flex-container--lower').css('display', 'flex');
             }, 300);
             setTimeout(function(){
-                $('.untitled-text-overlay').animate({ top: '35px'}, 500, 'easeOutCubic');
-                //$('.untitled-text-overlay').css('left', '20px');
-                //$('.untitled-text-overlay').css('transform', 'none');
+                $('.untitled-text-overlay').animate({ top: '75px'}, 500, 'easeOutCubic');
                 $('.untitled-text-overlay > svg > g > path').css({fill: '#FFF6D6', transition: '.5s'});
             }, 600);
             setTimeout(function(){
@@ -171,6 +172,7 @@ function mobileFunctions() {
             }, 2000);
         }); 
         setTimeout(function(){
+            $('.home-slider').css('display','none');
             $('body').css('position', 'relative');
             $('body').css('overflow-y', 'auto');
         }, 2300);
@@ -207,6 +209,7 @@ function mobileFunctions() {
                     'transform' : 'translate(-50%, -50%)',
                     'left' : '50%'
                 });
+                $('.home-slider').css('display','block');
             }, 1500);
             setTimeout(function(){
                 $('.home-slider').animate({ opacity: 1 }, 500);

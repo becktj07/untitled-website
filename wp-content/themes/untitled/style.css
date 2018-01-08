@@ -1790,7 +1790,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       font-size: 1em;
       line-height: 1.25em;
       margin-bottom: 15px;
-      color: #000; }
+      color: #000;
+      z-index: 999; }
       .info-flex-container .info-description li > a:hover {
         text-decoration: none; }
     .info-flex-container .info-description p {
