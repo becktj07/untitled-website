@@ -92,7 +92,7 @@
 		</div>
 	</section>
 	<div class="home-button-wrapper">
-		<a href="#top" id="info-button-trigger">
+		<a href="#top" class="info-button-trigger">
 			<div class="x-i-button">
 <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.667 25.96">
   <circle fill="none" stroke="#000" stroke-width="2.25" stroke-miterlimit="10" cx="12.855" cy="12.884" r="11.416"/>
