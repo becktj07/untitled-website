@@ -826,15 +826,15 @@ _:default:not(:root:root):after, h2.content-development-management:after {
 
 @font-face {
   font-family: 'SS-SemiBold';
-  src: url("/wp-content/themes/untitled/fonts/SourceSansPro-SemiBold.ttf"); }
+  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-SemiBold.ttf"); }
 
 @font-face {
   font-family: 'SS-Regular';
-  src: url("/wp-content/themes/untitled/fonts/SourceSansPro-Regular.ttf"); }
+  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Regular.ttf"); }
 
 @font-face {
   font-family: 'SS-Light';
-  src: url("/wp-content/themes/untitled/fonts/SourceSansPro-Light.ttf"); }
+  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Light.ttf"); }
 
 .header {
   max-width: none;
@@ -1796,7 +1796,8 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
         text-decoration: none; }
     .info-flex-container .info-description p {
       letter-spacing: .015em;
-      font-size: 1.1em; }
+      font-size: 1.025em;
+      line-height: 1.6em; }
       .info-flex-container .info-description p:first-of-type {
         margin-top: 0px; }
 
