@@ -60,8 +60,6 @@
 						</div>
 						<div class="info-description">
 							<?php the_field('info_description'); ?>
-							<!-- <p>Untitled Creative Studio is a full-service branding and communications studio focused on building brands and helping sustain brands. True to our name, we believe all projects start as an “untitled” document requiring discovery and definition phases with our clients to thoroughly understand the challenges and opportunities at hand and define the strategy and vision for the project. These initial phases guide to the creation of strategic, audience focused, and well- crafted experiences across multiple channels both on- and off-line that work together to build loyalty for the client’s brand and help them exceed their goals.</p>
-							<p>Untitled Creative Studio is owned by Miguel Jasniewski and Jen Kuhn. With fifteen years of design, advertising, and interactive industry experience they’ve worked with clients ranging from national-level corporations to small and medium community-centered companies to start-ups, and non profits.</p> -->
 						</div>
 					</div>
 
