@@ -39,23 +39,19 @@
 						<div class="info-headings">
 							<h2>Branding</h2>
 							<ul>
-								<li>Research + Discovery</li>
-								<li>Brand Positioning</li>
-								<li>Brand Messaging</li>
-								<li>Brand Strategy</li>
+								<li>Research + User Insights</li>
+								<li>Brand Strategy + Positioning</li>
+								<li>Key Messaging</li>
 								<li>Naming</li>
 							</ul>
 							<h2>Design</h2>
 							<ul>
-								<li>Brand Identity</li>
-								<li>Publishing Design</li>
-								<li>Packaging Design</li>
-								<li>Print Collateral</li>
-								<li>Events + Exhibitions</li>
-								<li>Environments</li>
-								<li>Website Strategy, Design, & Development</li>
-								<li>User Experience Strategy + Design</li>
-								<li>Mobile</li>
+								<li>Visual Identity</li>
+								<li>Brand Activation</li>
+								<li>Website + Digital</li>
+								<li>Print + Publication</li>
+								<li>Packaging</li>
+								<li>Events + Exhibition and Spaces</li>
 							</ul>
 						</div>
 						<div class="info-description">
@@ -65,25 +61,24 @@
 
 					<div class="info-flex-container info-flex-container--lower">
 						<div class="info-headings">
-							<h2 class="content-development-management">Content Development + Management</h2>
+							<h2 class="content-development-management">Content Creation</h2>
 							<ul>
-								<li>SEO/Analytics</li>
-								<li>Website Maintenance</li>
-								<li>Social Media</li>
-								<li>Marketing</li>
-								<li>Copywriting</li>
+								<li>Content Strategy</li>
+								<li>Video + Motion</li>
 								<li>Photography</li>
-								<li>Video Production</li>            
+								<li>Copywriting + SEO</li>
+								<li>Social Media</li>
+								<li>Integrated Marketing</li>    
 							</ul>
 						</div>
 						<div class="info-description">
-							<h2 class="potential-projects">To discuss potential projects, please contact us at:</h2>
+							<h2 class="potential-projects">Hello</h2>
+							<a class="potential-projects__pdf-link" href="<?php echo get_site_url(); ?>/wp-content/uploads/2018/03/untd_work_overview.pdf" target="_blank">View a PDF of our work</a>
 							<ul>
-								<li><a href="mailto:highfive@untitledcreativestudio.com">highfive@untitledcreativestudio.com</a></li>
+								<li class="bold">Want to have a conversation?</li>
+								<li><a href="mailto:info@untitledcreativestudio.com">info@untitledcreativestudio.com</a></li>
 								<li>414-792-9670</li>
-								<li>1835 N 54th <br>
-								Milwaukee, WI 53208
-								</li>
+								<li>1835 N 54th Milwaukee, WI 53208</li>
 							</ul>
 						</div>
 					</div>
@@ -93,11 +88,11 @@
 	<div class="home-button-wrapper">
 		<a href="#top" class="info-button-trigger">
 			<div class="x-i-button">
-<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.667 25.96">
-  <circle fill="none" stroke="#000" stroke-width="2.25" stroke-miterlimit="10" cx="12.855" cy="12.884" r="11.416"/>
-  <path id="i-icon" d="M11.327 7.062c0-.81.648-1.368 1.53-1.368.9 0 1.531.558 1.531 1.368s-.631 1.387-1.531 1.387c-.882 0-1.53-.576-1.53-1.387m.216 2.701h2.647v8.931h-2.647V9.763z"/>
-  <path id="x-icon" fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10" d="M17.634 8.141L8.08 17.694m0-9.553l9.554 9.554"/>
-</svg>
+				<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.667 25.96">
+				<circle fill="none" stroke="#000" stroke-width="2.25" stroke-miterlimit="10" cx="12.855" cy="12.884" r="11.416"/>
+				<path id="i-icon" d="M11.327 7.062c0-.81.648-1.368 1.53-1.368.9 0 1.531.558 1.531 1.368s-.631 1.387-1.531 1.387c-.882 0-1.53-.576-1.53-1.387m.216 2.701h2.647v8.931h-2.647V9.763z"/>
+				<path id="x-icon" fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10" d="M17.634 8.141L8.08 17.694m0-9.553l9.554 9.554"/>
+				</svg>
 			</div>
 		</a>
 	</div>

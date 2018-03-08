@@ -826,15 +826,15 @@ _:default:not(:root:root):after, h2.content-development-management:after {
 
 @font-face {
   font-family: 'SS-SemiBold';
-  src: url("/wp-content/themes/untitled/fonts/SourceSansPro-SemiBold.ttf"); }
+  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-SemiBold.ttf"); }
 
 @font-face {
   font-family: 'SS-Regular';
-  src: url("/wp-content/themes/untitled/fonts/SourceSansPro-Regular.ttf"); }
+  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Regular.ttf"); }
 
 @font-face {
   font-family: 'SS-Light';
-  src: url("/wp-content/themes/untitled/fonts/SourceSansPro-Light.ttf"); }
+  src: url("/untitled/wp-content/themes/untitled/fonts/SourceSansPro-Light.ttf"); }
 
 .header {
   max-width: none;
@@ -1759,9 +1759,15 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       list-style: none;
       padding: 0;
       margin: 0 0 30px 0; }
+      @media only screen and (min-width: 380px) {
+        .info-flex-container .info-headings ul {
+          margin: 0 0 0px 0; } }
+      @media only screen and (min-width: 768px) {
+        .info-flex-container .info-headings ul {
+          margin: 0 0 75px 0; } }
     .info-flex-container .info-headings li {
       font-size: .95em;
-      line-height: 18px;
+      line-height: 20px;
       margin-bottom: 5px; }
   .info-flex-container .info-description {
     -ms-flex-preferred-size: 100%;
@@ -1792,8 +1798,6 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       margin-bottom: 15px;
       color: #000;
       z-index: 999; }
-      .info-flex-container .info-description li > a:hover {
-        text-decoration: none; }
     .info-flex-container .info-description p {
       letter-spacing: .015em;
       font-size: 1.0em;
@@ -1826,17 +1830,26 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
     display: inline-block; }
     @media only screen and (min-width: 768px) {
       .info-flex-container--lower h2.content-development-management {
-        width: 185px; } }
+        width: 140px; } }
   .info-flex-container--lower h2.potential-projects {
     text-transform: none;
     margin-bottom: 12px;
     width: auto;
     border-bottom: 2.5px solid #000;
-    font-size: .95em; }
+    font-size: .95em;
+    display: inline-block; }
     @media only screen and (min-width: 768px) {
       .info-flex-container--lower h2.potential-projects {
-        margin-top: 16px;
+        margin-top: 5px;
         font-size: 1em; } }
+  .info-flex-container--lower .potential-projects__pdf-link {
+    display: block;
+    width: 185px;
+    color: #000;
+    margin-bottom: 1.5em;
+    text-decoration: underline;
+    font-size: 1.05em;
+    letter-spacing: .045em; }
   .info-flex-container--lower .info-headings {
     text-align: right;
     -ms-flex-preferred-size: 100%;
@@ -1886,6 +1899,13 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
       font-size: 1.05em;
       line-height: 1.25em;
       margin-bottom: 15px; }
+      .info-flex-container--lower .info-description li a {
+        text-decoration: underline; }
+        .info-flex-container--lower .info-description li a:hover {
+          text-decoration: underline; }
+    .info-flex-container--lower .info-description li.bold {
+      font-family: "SS-SemiBold", Arial, sans-serif;
+      margin-bottom: 5px; }
     .info-flex-container--lower .info-description p {
       letter-spacing: .025em;
       font-size: 1.01em; }
