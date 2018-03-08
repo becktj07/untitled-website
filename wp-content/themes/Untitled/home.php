@@ -68,12 +68,12 @@
 								<li>Photography</li>
 								<li>Copywriting + SEO</li>
 								<li>Social Media</li>
-								<li>Integrated Marketing</li>    
+								<li>Integrated Marketing</li>   
 							</ul>
 						</div>
 						<div class="info-description">
 							<h2 class="potential-projects">Hello</h2>
-							<a class="potential-projects__pdf-link" href="<?php echo get_site_url(); ?>/wp-content/uploads/2018/03/untd_work_overview.pdf" target="_blank">View a PDF of our work</a>
+							<a class="potential-projects__pdf-link" href="<?php the_field('info_pdf_link'); ?>" target="_blank">View a PDF of our work</a>
 							<ul>
 								<li class="bold">Want to have a conversation?</li>
 								<li><a href="mailto:info@untitledcreativestudio.com">info@untitledcreativestudio.com</a></li>
