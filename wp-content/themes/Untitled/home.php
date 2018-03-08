@@ -76,9 +76,9 @@
 							<a class="potential-projects__pdf-link" href="<?php the_field('info_pdf_link'); ?>" target="_blank">View a PDF of our work</a>
 							<ul>
 								<li class="bold">Want to have a conversation?</li>
-								<li><a href="mailto:info@untitledcreativestudio.com">info@untitledcreativestudio.com</a></li>
+								<li><a href="mailto:highfive@untitledcreativestudio.com">highfive@untitledcreativestudio.com</a></li>
 								<li>414-792-9670</li>
-								<li>1835 N 54th Milwaukee, WI 53208</li>
+								<li>1835 N. 54th, Milwaukee, WI 53208</li>
 							</ul>
 						</div>
 					</div>
