@@ -194,12 +194,18 @@
 
 	.potential-projects__pdf-link {
 		display: block;
-		width: 185px;
+		
 		color: #000;
 		margin-bottom: 1.5em;
 		text-decoration: underline;
-		font-size: 1.05em;
+		font-size: 1em;
 		letter-spacing: .045em;
+		text-align: right;
+
+		@media #{$mq-medium} {
+			text-align: left;
+			width: 185px;
+		}
 	}
 
 	.info-headings {

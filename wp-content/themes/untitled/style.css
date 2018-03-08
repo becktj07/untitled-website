@@ -1844,12 +1844,16 @@ svg:hover #icon-facebook, svg:hover #icon-twitter, svg:hover #icon-linkedin {
         font-size: 1em; } }
   .info-flex-container--lower .potential-projects__pdf-link {
     display: block;
-    width: 185px;
     color: #000;
     margin-bottom: 1.5em;
     text-decoration: underline;
-    font-size: 1.05em;
-    letter-spacing: .045em; }
+    font-size: 1em;
+    letter-spacing: .045em;
+    text-align: right; }
+    @media only screen and (min-width: 768px) {
+      .info-flex-container--lower .potential-projects__pdf-link {
+        text-align: left;
+        width: 185px; } }
   .info-flex-container--lower .info-headings {
     text-align: right;
     -ms-flex-preferred-size: 100%;
